@@ -1,0 +1,50 @@
+body
+{
+	font-family: 'Arial';
+	background-color: #3498db;
+}
+
+.wrap
+{
+	width: 31%;
+	overflow: hidden;
+	margin: 31%;
+	margin-top: 10%;
+	padding: 1%;
+	background: #fff;
+	border: 3% solid silver;
+	border-radius: 2%;
+}
+
+.flex
+{
+	display: flex;
+  	flex-wrap: wrap;
+  	flex-direction: column;
+  	align-items: center;
+  	padding: 10%;
+}
+
+.flex li 
+{
+	display: flex;
+  	flex-wrap: wrap;
+  	align-items: left;
+}
+
+.flex ul
+{
+	list-style-type: none;
+}
+
+.flex > li > label
+{
+	flex : 1 0 30%;
+	max-width: 50%;
+}
+
+.flex > li > label + *
+{
+	flex : 1 0 40%;
+	max-width: 40%;
+}
