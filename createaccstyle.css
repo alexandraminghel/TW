@@ -6,9 +6,10 @@ body
 
 .wrap
 {
-	width: 31%;
+	position: absolute;
+	width: 50%;
 	overflow: hidden;
-	margin: 31%;
+	margin: 25%;
 	margin-top: 10%;
 	padding: 1%;
 	background: #fff;
@@ -16,13 +17,15 @@ body
 	border-radius: 2%;
 }
 
+.wrap h2
+{
+	text-align: center;
+	margin-bottom: 6%;
+}
+
 .flex
 {
-	display: flex;
-  	flex-wrap: wrap;
-  	flex-direction: column;
-  	align-items: center;
-  	padding: 10%;
+  	margin: 0 auto;
 }
 
 .flex li 
@@ -32,19 +35,73 @@ body
   	align-items: left;
 }
 
+.flex p
+{
+	flex: 1 0 40%;
+  	max-width: 40%;
+}
+
 .flex ul
 {
+	padding: 1% 1% 1% 1%;
 	list-style-type: none;
 }
 
-.flex > li > label
-{
-	flex : 1 0 30%;
-	max-width: 50%;
+.flex label,
+.flex p {
+  padding: 1% 1% 1% 1%;
+  text-transform: uppercase;
 }
 
-.flex > li > label + *
+.flex label
 {
-	flex : 1 0 40%;
-	max-width: 40%;
+	flex: 1 0 30%;
+  	max-width: 30%;
+   	text-transform: uppercase;
+}
+
+.flex button
+{
+	padding: 1%;
+	width: 40%;
+	height: 30%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 130%;
+	margin-left: auto;
+	margin-right: 6%;
+}
+
+.flex input
+{
+	flex : 1 0 60%;
+	max-width: 60%;
+	border-radius: 2%;
+	margin-bottom: 1%;
+	border: 3% solid silver;
+	padding: 1%;
+}
+
+.back
+{
+	margin-top: -3%;
+}
+
+.back a
+{
+	text-decoration: none;
+	font-size: 80%;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #3498db;
+}
+
+a:hover
+{
+	color: #000;
 }
