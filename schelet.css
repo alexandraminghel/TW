@@ -1,0 +1,64 @@
+body
+{
+	font-family: 'Arial';
+	background-color: #3498db;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrap
+{
+	display: flex;
+}
+
+.nav1
+{
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	margin-top: 5%;
+	margin-left: 6%;
+	width: 15%;
+	background: #fff;
+	border: 3% solid silver;
+	padding: 1%;
+}
+
+.nav2
+{
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+   	right:0;
+	margin-top: 5%;
+	margin-right: 3%;
+	width: 15%;
+	background: #fff;
+	border: 3% solid silver;
+	padding: 1%;
+}
+
+.nav1 p
+{
+	text-overflow: 
+}
+
+main
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 50%;
+	position: absolute;
+	width: 50%;
+	overflow: hidden;
+	margin: 25%;
+	margin-top: 5%;
+	padding: 1%;
+	background: #fff;
+	border: 3% solid silver;
+}
+
+ul
+{
+	list-style: none;
+}
