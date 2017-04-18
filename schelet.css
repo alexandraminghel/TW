@@ -9,6 +9,7 @@ body
 .wrap
 {
 	display: flex;
+
 }
 
 .nav1
@@ -22,6 +23,23 @@ body
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
+	height: 300%;
+	width: 20%;
+}
+
+.nav1 div
+{
+	font-weight: bold;
+	font-size: 200%;
+	padding: 30%;
+
+}
+
+.nav1 img
+{
+	height: 100px;
+
+   
 }
 
 .nav2
@@ -36,7 +54,10 @@ body
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
+	height: 300%;
+	width: 20%;
 }
+
 
 .nav1 p
 {
@@ -49,13 +70,14 @@ main
 	flex-wrap: wrap;
 	flex: 0 1 50%;
 	position: absolute;
-	width: 50%;
+	width: 40%;
 	overflow: hidden;
 	margin: 25%;
 	margin-top: 5%;
 	padding: 1%;
 	background: #fff;
 	border: 3% solid silver;
+	left: 6%;
 }
 
 ul
