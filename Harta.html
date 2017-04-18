@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+        <link rel="stylesheet" href="new 1s.css">
+   </head>
+   
+   <body>
+        <div class="info_c">  
+        <dl>
+		   <dt>Address:</dt>
+		   <dd><address>Facultatea de Informatică, Universitatea "Al. I. Cuza", General Berthelot, 16, IAŞI 700483, ROMANIA<address></dd>
+		   <dt>Phone:</dt>
+		   <dd>+40 232 201090</dd>
+		   <dt>Fax:</dt>
+		   <dd>+40 232 201490</dd>
+		   <dt>E-Mail:</dt>
+		   <dd>secretariat@info.uaic.ro</dd>
+		</dl>
+		</div>
+		<h4> Map </h4>
+		<div id="map"></div>
+		<script>function initMap(){
+    var uluru = {lat: 47.173967,lng: 27.574900};
+	var map= new google.maps.Map(document.getElementById('map'),{
+	    zoom:15,
+		center: uluru
+	});
+	var marker = new google.maps.Marker({
+	    position: uluru,
+		map: map
+	});
+}</script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5USGpENUn_tsbLxKInNe6c8SMVulSjBM&callback=initMap"></script>
+   </body>
+   
+   
+</html>
