@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programare vizita</title>
+	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="scheletvisit.css">
+</head>
+<body>
+	<div class = "wrap">
+		<main>
+			<div class = "wrapmain">
+				<h2>Programare vizita</h2>
+	    		<form action="cvisit.php" method="post">
+		    		<ul class="flex">
+		  	    		<li>
+		  	       			<label for="lastname">Nume detinut</label>
+      			   			<input type="text" id="lastname" placeholder="Numele de familie">
+    		    		</li>
+    		    		<li>
+    			   			<label for="firstname">Prenume detinut</label>
+    			   			<input type="text" id="firstname" placeholder="Prenumele">
+    		    		</li>
+    		    		<li>
+    			   			<label for="date">Data vizitei</label>
+    			   			<input type="text" name="date" placeholder="zz/ll/aaaa">
+    		    		</li>
+    		    		<li>
+      						<label for="talksummary">Rezumatul discutiei</label>
+     	 					<textarea rows="6" id="talksummary" placeholder="Rezumatul discutiei"></textarea>
+    					</li>
+    					<li>
+      						<label for="objects">Obiecte aduse detinutului </label>
+     	 					<textarea rows="6" id="objects" placeholder="Obiecte aduse detinutului"></textarea>
+    					</li>
+    		    		<li>
+    			   			<button type="submit">Adauga programare</button>
+    		    		</li>
+		    		</ul>
+	    		</form>
+	    	</div>
+		</main>
+		<aside class = "nav1">
+		<ul>
+			<li><div>Profil</div></li>
+			<li><img src="admin.png"></li>
+			<li>Popescu Maria</li>
+		</ul>
+		</aside>
+		<nav class = "nav2">
+		</nav>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,170 @@
+body
+{
+	font-family: 'Arial';
+	background-color: #3498db;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrap
+{
+	display: flex;
+
+}
+
+.nav1
+{
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	margin-top: 5%;
+	margin-left: 6%;
+	width: 15%;
+	background: #fff;
+	border: 3% solid silver;
+	padding: 1%;
+	height: 300%;
+	width: 20%;
+}
+
+.nav1 div
+{
+	font-weight: bold;
+	font-size: 200%;
+	padding: 30%;
+
+}
+
+.nav1 img
+{
+	height: 100px;
+
+   
+}
+
+.nav2
+{
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+   	right:0;
+	margin-top: 5%;
+	margin-right: 3%;
+	width: 15%;
+	background: #fff;
+	border: 3% solid silver;
+	padding: 1%;
+	height: 300%;
+	width: 20%;
+}
+
+
+.nav1 p
+{
+	text-overflow: 
+}
+
+main
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 50%;
+	position: absolute;
+	width: 40%;
+	overflow: hidden;
+	margin: 25%;
+	margin-top: 5%;
+	padding: 1%;
+	background: #fff;
+	border: 3% solid silver;
+	left: 6%;
+}
+
+ul
+{
+	list-style: none;
+}
+
+.wrapmain
+{
+	margin: 0 0 0 0;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+}
+
+.wrapmain h2
+{
+	text-align: center;
+	margin-bottom: 6%;
+}
+
+.flex
+{
+  	margin: 0 auto;
+}
+
+.flex li 
+{
+	display: flex;
+  	flex-wrap: wrap;
+  	align-items: left;
+}
+
+.flex p
+{
+	flex: 1 0 40%;
+  	max-width: 40%;
+}
+
+.flex ul
+{
+	margin-left: auto;
+	padding: 1% 1% 1% 1%;
+	list-style-type: none;
+}
+
+.flex label,
+.flex p {
+  padding: 1% 1% 1% 1%;
+}
+
+.flex label
+{
+	flex: 1 0 30%;
+  	max-width: 30%;
+}
+
+.flex button
+{
+	padding: 1%;
+	width: 40%;
+	height: 30%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 100%;
+	margin-left: auto;
+	margin-right: 6%;
+}
+
+.flex input
+{
+	flex : 1 0 60%;
+	max-width: 60%;
+	border-radius: 2%;
+	margin-bottom: 1%;
+	border: 3% solid silver;
+	padding: 1%;
+}
+
+.flex textarea
+{
+	flex : 1 0 60%;
+	max-width: 60%;
+	border-radius: 2%;
+	margin-bottom: 1%;
+	border: 3% solid silver;
+	padding: 1%;
+}
