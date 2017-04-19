@@ -10,7 +10,7 @@
 
 		<div class = "usernav">
 			<ul>
-				<li><a href="createaccount.html">Contact</a></li>
+				<li class="ceva"><a href="createaccount.html">Contact</a></li>
 				<li><a href="createaccount.html">Logout</a></li>
 			</ul>
 		</div>
@@ -34,12 +34,16 @@
     			   			<input type="text" name="date" placeholder="zz/ll/aaaa">
     		    		</li>
     		    		<li>
-      						<label for="talksummary">Rezumatul discutiei</label>
-     	 					<textarea rows="6" id="talksummary" placeholder="Rezumatul discutiei"></textarea>
+      						<label for="talksummary">Natura vizitei</label>
+     	 					<textarea rows="6" id="talksummary" placeholder="Natura vizitei"></textarea>
     					</li>
     					<li>
       						<label for="objects">Obiecte aduse detinutului </label>
      	 					<textarea rows="6" id="objects" placeholder="Obiecte aduse detinutului"></textarea>
+    					</li>
+    					<li>
+      						<label for="related">Relatia cu detinutul</label>
+     	 					<input id="related" placeholder="Relatia cu detinutul"></input>
     					</li>
     		    		<li>
     			   			<button type="submit">Adauga programare</button>
@@ -49,11 +53,16 @@
 	    	</div>
 		</main>
 		<div class = "nav1">
-		<ul>
-			<li class="nav11"><div>Profil</div></li>
-			<li class="nav12">Popescu Maria</li>
-			<button class="buton"><a href="loginpage.html">Logout</a></button>
-		</ul>
+			<ul>
+				<img src="admin.png" class="imagine">
+			</ul>
+			<div class = "infotable">
+			<table class = "info">
+					<tr><td>Popescu Maria</td></tr>
+					<tr><td>Ultima logare: 19.04.2017</td></tr>
+					<tr><td>Ultima vizita: 14.04.2017</td></tr>
+			</table>
+			</div>
 		</div>
 	</div>	
 </body>

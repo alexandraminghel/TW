@@ -14,25 +14,18 @@ body
 .userheader
 {
 	display: flex;
-	flex: row;
-	position: fixed;
+	position: absolute;
+	left: 0%;
 	top: 0;
-	margin-left: -1%;
-	margin-right: -1%;
-    width: 101%;
+	margin: 0;
+	
+	width: 100%;
     background: #fff;   
-}
-
-.numepen
-{
-	padding: 1% 1% 1% 1%;
-	float: left;	
 }
 
 .usernav
 {
 	margin-left: auto;
-	height: 105%;
 }
 
 .usernav ul 
@@ -41,14 +34,12 @@ body
     margin: 0;
     padding: 0;
     overflow: hidden;
-    margin-top: -2%;
 }
 
 .usernav li
 {
 	float: right;
 	display: inline;
-	margin-top: -2%;
 }
 
 .usernav li a 
@@ -77,28 +68,14 @@ body
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
-	height: 69%;
+	
 	width: 15%;
 	flex: 0 1 50%;
 	position: absolute;
-	top: 7%;
+	top: 5%;
 	text-align: center;
 
 }
-
-.nav1 .buton
-{
-	padding: 1%;
-	width: 85%;
-	height: 11%;
-	margin-top: 45%;
-	background-color: #3498db;
-	color: #fff;
-	border-radius: 3%;
-	border: 1;
-	font-size: 150%;
-}
-
 
 .nav1 a:link, a:visited {
     
@@ -106,36 +83,6 @@ body
     text-align: center;
     text-decoration: none;
     display: inline-block;
-}
-
-.nav11
-{
-	font-weight: bold;
-	font-size: 200%;
-	padding: 10%;
-	background: #cce5ff;
-	margin-bottom: 40%;
-	margin-top: 80%;
-	margin-left: -15%;
-	border-radius: 10%;
-	border:3% solid silver;
-	width: 120%;
-}
-
-.nav12
-{
-	background: #cce5ff;
-	font-weight: bold;
-	font-size: 100%;
-	bottom: 10%;
-	border-radius: 10%;
-	border:3% solid silver;
-	padding: 5%;
-	margin-left: 4%;
-}
-
-.nav1 p
-{
 }
 
 main
@@ -152,8 +99,7 @@ main
 	background: #fff;
 	border: 3% solid silver;
 	left: 1%;
-	top: 7%;
-	height: 69%;
+	top: 5%;
 }
 
 ul
@@ -243,4 +189,28 @@ ul
 	margin-bottom: 1%;
 	border: 3% solid silver;
 	padding: 1%;
+}
+
+.nav1 .imagine
+{
+	width: 100%;
+    height: auto;
+    position: relative;
+    left: -11%;
+
+}
+
+.infotable
+{
+	background-color: #cce5ff;
+	top: -20%;
+	position: relative;
+	width: 100%;
+}
+
+.info
+{
+	padding-top: 10%;
+	padding-bottom: 10%;
+	width: 100%;
 }
