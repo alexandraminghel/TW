@@ -4,6 +4,7 @@ body
 	background-color: #3498db;
 	display: flex;
 	flex-direction: column;
+
 }
 
 .wrap
@@ -16,37 +17,73 @@ body
 {
 	display: flex;
 	flex-wrap: wrap;
-	position: fixed;
 	margin-top: 5%;
 	margin-left: 6%;
 	width: 15%;
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
-	height: 300%;
-	width: 20%;
+	height: 69%;
+	width: 15%;
+	flex: 0 1 50%;
+	position: absolute;
+	top: 7%;
+	text-align: center;
+
 }
 
-.nav1 div
+.nav1 .buton
+{
+	padding: 1%;
+	width: 85%;
+	height: 11%;
+	margin-top: 45%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 150%;
+}
+
+
+a:link, a:visited {
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav11
 {
 	font-weight: bold;
 	font-size: 200%;
-	padding: 30%;
-
+	padding: 10%;
+	background: #cce5ff;
+	margin-bottom: 40%;
+	margin-top: 80%;
+	margin-left: -15%;
+	border-radius: 10%;
+	border:3% solid silver;
+	width: 120%;
 }
 
-.nav1 img
+.nav12
 {
-	height: 100px;
-
-   
+	background: #cce5ff;
+	font-weight: bold;
+	font-size: 100%;
+	bottom: 10%;
+	border-radius: 10%;
+	border:3% solid silver;
+	padding: 5%;
+	margin-left: 4%;
 }
 
 .nav2
 {
 	display: flex;
 	flex-wrap: wrap;
-	position: fixed;
    	right:0;
 	margin-top: 5%;
 	margin-right: 3%;
@@ -54,8 +91,11 @@ body
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
-	height: 300%;
+	height: 69%;
 	width: 20%;
+	flex: 0 1 50%;
+	position: absolute;
+	top: 7%;
 }
 
 
@@ -70,14 +110,16 @@ main
 	flex-wrap: wrap;
 	flex: 0 1 50%;
 	position: absolute;
-	width: 40%;
+	width: 45%;
 	overflow: hidden;
 	margin: 25%;
 	margin-top: 5%;
 	padding: 1%;
 	background: #fff;
 	border: 3% solid silver;
-	left: 6%;
+	left: 1%;
+	top: 7%;
+	height: 69%;
 }
 
 ul
