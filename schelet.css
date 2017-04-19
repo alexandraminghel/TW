@@ -16,48 +16,64 @@ body
 {
 	display: flex;
 	flex-wrap: wrap;
-	position: fixed;
-	margin-top: 5%;
-	margin-left: 6%;
-	width: 15%;
+	position: absolute;
+	margin-top: -3%;
+	margin-left: -2%;
+	width: 10%;
 	background: #fff;
 	border: 3% solid silver;
 	padding: 1%;
-	height: 300%;
-	width: 20%;
+	height: 100%;
+	
 }
 
-.nav1 div
+.nav1 .utilizatori
 {
-	font-weight: bold;
-	font-size: 200%;
 	padding: 30%;
-
+	width: 180%;
+	height: 4%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 90%;
+	margin-bottom: 60%;
+	margin-top: 350%;
+	text-align: center;
 }
 
-.nav1 img
+
+.nav1 .detinuti
 {
-	height: 100px;
-
-   
+	padding: 30%;
+	width: 180%;
+	height: 4%;
+	margin-top: 4%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 90%;
+	margin-bottom: 60%;
+	text-align: center;
 }
 
-.nav2
+
+
+.nav1 .statistici
 {
-	display: flex;
-	flex-wrap: wrap;
-	position: fixed;
-   	right:0;
-	margin-top: 5%;
-	margin-right: 3%;
-	width: 15%;
-	background: #fff;
-	border: 3% solid silver;
-	padding: 1%;
-	height: 300%;
-	width: 20%;
+	padding: 30%;
+	width: 180%;
+	height: 4%;
+	margin-top: 4%;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 3%;
+	border: 1;
+	font-size: 90%;
+	margin-bottom: 60%;
+	text-align: center;
 }
-
 
 .nav1 p
 {
@@ -70,14 +86,16 @@ main
 	flex-wrap: wrap;
 	flex: 0 1 50%;
 	position: absolute;
-	width: 40%;
+	width: 85%;
 	overflow: hidden;
 	margin: 25%;
-	margin-top: 5%;
+	margin-top: -1%;
+	margin-left: 6%;
 	padding: 1%;
 	background: #fff;
 	border: 3% solid silver;
 	left: 6%;
+	height: 96%;
 }
 
 ul
