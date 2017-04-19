@@ -3,14 +3,68 @@ body
 	font-family: 'Arial';
 	background-color: #3498db;
 	display: flex;
-	flex-direction: column;
-
 }
 
 .wrap
 {
 	display: flex;
+	flex-direction: column;
+}
 
+.userheader
+{
+	display: flex;
+	flex: row;
+	position: fixed;
+	top: 0;
+	margin-left: -1%;
+	margin-right: -1%;
+    width: 101%;
+    background: #fff;   
+}
+
+.numepen
+{
+	padding: 1% 1% 1% 1%;
+	float: left;	
+}
+
+.usernav
+{
+	margin-left: auto;
+	height: 105%;
+}
+
+.usernav ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-top: -2%;
+}
+
+.usernav li
+{
+	float: right;
+	display: inline;
+	margin-top: -2%;
+}
+
+.usernav li a 
+{
+	display: block;
+	padding-right: 14px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	padding-left: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.usernav li a:hover
+{
+    background-color: #cce5ff;
 }
 
 .nav1
@@ -46,7 +100,7 @@ body
 }
 
 
-a:link, a:visited {
+.nav1 a:link, a:visited {
     
     color: white;
     text-align: center;
@@ -80,28 +134,8 @@ a:link, a:visited {
 	margin-left: 4%;
 }
 
-.nav2
-{
-	display: flex;
-	flex-wrap: wrap;
-   	right:0;
-	margin-top: 5%;
-	margin-right: 3%;
-	width: 15%;
-	background: #fff;
-	border: 3% solid silver;
-	padding: 1%;
-	height: 69%;
-	width: 20%;
-	flex: 0 1 50%;
-	position: absolute;
-	top: 7%;
-}
-
-
 .nav1 p
 {
-	text-overflow: 
 }
 
 main
@@ -110,7 +144,7 @@ main
 	flex-wrap: wrap;
 	flex: 0 1 50%;
 	position: absolute;
-	width: 45%;
+	width: 60%;
 	overflow: hidden;
 	margin: 25%;
 	margin-top: 5%;
