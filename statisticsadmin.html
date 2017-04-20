@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Statistici</title>
+	<meta charset = "utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "statisticsadmin.css">
+</head>
+<body>
+	<div class = "sidebar">
+		<div class = "title">
+			<img src = "admin.jpg" class = "imagine">
+			<p class = "text">Administrator</p>
+		</div>
+		<ul class = "nav">
+			<li class = "nav-item1">
+				<img src = "acasa.png" class = "nav-item1img">
+				Pagina de start
+			</li>
+			<li class = "nav-item2">
+				<img src = "users.png" class = "nav-item2img">
+				Utilizatori
+			</li>
+			<li class = "nav-item3">
+				<img src = "detinuti.png" class = "nav-item3img">
+				Detinuti
+			</li>
+			<li class = "nav-item4">
+				<img src = "statistici.png" class = "nav-item4img">
+				Statistici
+			</li>
+		</ul>
+	</div>
+	<div class = "header">
+	<div class = "header-logout">
+			<ul>
+				<li><a href="createaccount.html">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class = "continut">
+		<div class = "line1">
+			<div class = "vizitatori">
+				<div class = "textviz">Vizitatori astazi</div>
+				<div class = "nrviz"> <h3 id = "numviz"> 15 </h3></div>
+			</div>
+			<div class = "statisticsid">
+				<form id = "IDsearch">
+					<label class = "textid" for = "id"> Statistici pentru detinutul</label>
+					<input type = "text" name = "id" placeholder="ID">
+					<button type = "submit">Cauta</button>
+				</form>
+			</div>
+		</div>
+
+		<div class = "graphs">
+			<img src="Visitors.jpg" class = "img1" alt = "grafic vizitatori">
+			<img src="population.jpg" class = "img2" alt = "grafic populatie">
+		</div>
+		
+		<ul class = "optiuni">
+			<li><a href = "lastmonth.php">Vizite ultima luna</a></li>
+			<li><a href = "lastthreemonths.php">Vizite ultimele 3 luni</a></li>
+			<li><a href = "lastsixmonths.php">Vizite ultimele 6 luni</a></li>
+			<li><a href = "lastyear.php">Vizite ultimul an</a></li>
+		</ul>
+	</div>
+</body>
+</html>

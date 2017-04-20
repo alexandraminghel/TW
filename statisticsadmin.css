@@ -1,0 +1,245 @@
+body
+{
+	display: flex;
+}
+
+.sidebar
+{
+	width: 15%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	background-color: #34495e;
+}
+
+.imagine
+{
+	width: 30%;
+    height: 100%;  
+}
+
+.title
+{
+	background-color: grey;
+	width: 100%;
+	height: 10%;
+	display: flex;
+	
+}
+
+.text
+{
+	color: white;
+	font-size: 90%;
+	text-transform: uppercase;
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-top: 10%;
+	letter-spacing: 10%;
+	display: block;
+}
+
+.nav-item2img
+{
+	width: 15%;
+    height: 100%;  
+}
+
+.nav-item3img
+{
+	width: 20%;
+    height: 10%;  
+}
+
+.nav-item1img
+{
+	width: 15%;
+    height: 10%; 	
+}
+
+.nav-item4img
+{
+	width: 15%;
+    height: 10%; 
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+.nav
+{
+	padding: 10%;
+	margin-left: 4%;
+	margin-top: 10%;
+
+}
+
+.nav-item1
+{
+	padding-bottom: 20%;
+}
+
+.nav-item2
+{
+	padding-bottom: 20%;
+}
+
+.nav-item3
+{
+	padding-bottom: 20%;
+}
+
+.nav-item4
+{
+	padding-bottom: 20%;
+}
+
+.header
+{
+	position: absolute;
+	left: 15%;
+	top: 0;
+	right: 0;
+	height: 10%;
+	border-bottom: 1px solid silver;
+}
+
+.header-logout li
+{
+	margin-left: 90%;
+
+}
+.header-logout a
+{
+	color: black;
+	text-decoration: none;
+	padding-top: 50%;
+	padding-bottom: 28%;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+.header-logout li a:hover
+{
+	background-color:grey;
+}
+
+.continut
+{
+	display: flex;
+	flex: 1 0 100%;
+	flex-direction: column;
+	width: 70%;
+	position: absolute;
+	top: 10%;
+	left: 15%;
+}
+
+.optiuni
+{
+	width: 100%;
+	padding-left: 5%;
+}
+
+.optiuni li
+{
+	padding-right: 3%;
+	display: inline;
+	white-space: wrap;
+}
+
+.optiuni li a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #6C7E8F;
+	color: white;
+	width: 100%;
+	padding: 1% 1% 1% 1%;
+}
+
+.optiuni li a:hover
+{
+	color: #34495e;
+}
+
+.line1
+{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding-left: 5%;
+	padding-top: 5%;
+}
+
+.vizitatori
+{
+	display :flex;
+	flex-direction: row;
+	width: 50%;
+	padding-left: 6%;
+}
+
+.vizitatori .textviz
+{
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 115%;
+	text-align: center;
+	text-transform: uppercase;
+	color: white;
+	background-color: #34495e;
+}
+
+.vizitatori .nrviz
+{
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 115%;
+	color: white;
+	width: 100%;
+	background-color: #6C7E8F;
+}
+
+.statisticsid
+{
+	width: 100%;
+	display :flex;
+	flex-direction: row;
+	padding-left: 15%;
+	padding-top: 2%;
+}
+
+.IDsearch
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.graphs
+{
+	display: flex;
+	width: 60%;
+	padding-top: 6%;
+	padding-left: 3%;
+	padding-bottom: 6%;
+}
+
+.img1
+{
+	width: 100%;
+	height: 100%;
+}
+
+.img2
+{
+	width: 100%;
+	height: 100%;
+}
