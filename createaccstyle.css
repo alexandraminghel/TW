@@ -1,7 +1,7 @@
 body
 {
 	font-family: 'Arial';
-	background-color: #3498db;
+	background-color: #34495e;
 }
 
 .wrap
@@ -65,7 +65,7 @@ body
 	padding: 1%;
 	width: 40%;
 	height: 30%;
-	background-color: #3498db;
+	background-color: #34495e;
 	color: #fff;
 	border-radius: 3%;
 	border: 1;
@@ -98,7 +98,7 @@ body
 a:visited
 {
 	text-decoration: none;
-	color: #3498db;
+	color: #34495e;
 }
 
 a:hover

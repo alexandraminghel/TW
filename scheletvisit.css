@@ -1,7 +1,7 @@
 body
 {
 	font-family: 'Arial';
-	background-color: #3498db;
+	background-color: #34495e;
 	display: flex;
 }
 
@@ -55,7 +55,7 @@ body
 
 .usernav li a:hover
 {
-    background-color: #cce5ff;
+    background-color:grey;
 }
 
 .nav1
@@ -162,7 +162,7 @@ ul
 	padding: 1%;
 	width: 40%;
 	height: 30%;
-	background-color: #3498db;
+	background-color: #34495e;
 	color: #fff;
 	border-radius: 3%;
 	border: 1;
@@ -202,7 +202,7 @@ ul
 
 .infotable
 {
-	background-color: #cce5ff;
+	background-color: grey;
 	top: -20%;
 	position: relative;
 	width: 100%;
