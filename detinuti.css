@@ -148,28 +148,25 @@ ul
 }
 
 
-table, th, td
-{
-	margin-left: 20%;
-	margin-top: 4%;
-	font-family: sans-serif;
-	font-size: 110%;
-	border-collapse: collapse;
-	opacity: 0.95;
-
-}
-
-td
-{
-	
-	padding-right: 7%;
-	padding-left: 7%;
-
-	
-	border: 5px solid #dddddd;
-}
 
 .primul
 {
 	background-color: #eee;
+	
 }
+
+
+table
+{
+	margin-left: 32%;
+	margin-top: 4%;
+	font-family: sans-serif;
+	font-size: 120%;
+}
+
+td
+{
+	border: 5px solid #dddddd;
+
+}
+
