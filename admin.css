@@ -70,7 +70,7 @@ ul
 	padding: 10%;
 	margin-left: 4%;
 	margin-top: 10%;
-
+	color: white;
 }
 
 .nav-item1
@@ -122,7 +122,7 @@ ul
 
 .header-logout li a:hover
 {
-	background-color:grey;
+	background-color:white;
 	padding-top: 50%;
 	padding-bottom: 28%;
 	padding-right: 10%;
