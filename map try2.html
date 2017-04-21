@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>Contact</title>
+		<!--<link href="http://fonts.googleapis.com/css?family=Marcellus+SC|Lato:400,700,900,700italic|Cutive+Mono|Marcellus|Nunito:400,700" rel="stylesheet" type="text/css">-->
+        <link rel="stylesheet" href="mapstyle.css">
+   </head>
+   
+   <body>
+        <section> 
+		   <div id="contents">
+		        <div id="content-header">
+				    <p>CONTACT</p>
+				</div>
+				<ul class="coloane-date">
+				    <li class="col-contact">
+					    <dl>
+		                    <dt>ADDRESS:</dt>
+		                    <dd><address>Facultatea de Informatică<br> 
+							Universitatea "Al. I. Cuza"<br> 
+							General Berthelot, 16, IAŞI<br>
+							700483, ROMANIA<address></dd>
+				        </dl>
+					</li>
+			        <li id="date-con" class="col-contact">
+					    <dl>
+						    <dt>CONTACT US</dt>
+						    <dt>E-Mail:</dt>
+		                    <dd>secretariat@info.uaic.ro</dd>
+						    <dt>Phone:</dt>
+		                    <dd>+40 232 201090</dd>
+						    <dt>Fax:</dt>
+						    <dd>+40 232 201490</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</section>
+        
+		<div id="map">
+		<script>
+		    function initMap(){
+                var uluru = {lat: 47.173967,lng: 27.574900};
+	            var map= new google.maps.Map(document.getElementById('map'),{
+	                zoom:15,
+		            center: uluru
+	            });
+	            var marker = new google.maps.Marker({
+	                position: uluru,
+		            map: map
+	            });
+            }
+		</script>
+		</div>
+		
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5USGpENUn_tsbLxKInNe6c8SMVulSjBM&callback=initMap"></script>
+        
+   </body>
+   
+   
+</html>
