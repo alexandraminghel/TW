@@ -1,7 +1,7 @@
 body
 {
 	font-family: 'Arial';
-	background-color: #34495e;
+	background-color: #3498db;
 	display: flex;
 }
 
@@ -18,71 +18,64 @@ body
 	left: 0%;
 	top: 0;
 	margin: 0;
-	
 	width: 100%;
-    background: #fff;   
+    background: #fff;  
+    height: 8%; 
 }
 
 .usernav
 {
+	display: flex;
 	margin-left: auto;
+	height: 100%;
 }
 
 .usernav ul 
 {
+	display: flex;
+	flex-direction: row;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 100%;
     overflow: hidden;
 }
 
 .usernav li
 {
-	float: right;
+	float: left;
+	height: 100%;
 	display: inline;
 }
 
 .usernav li a 
 {
 	display: block;
+	padding-top: 15px;
 	padding-right: 14px;
-	padding-top: 14px;
-	padding-bottom: 14px;
 	padding-left: 14px;
     color: black;
     text-decoration: none;
+    height: 100%;
 }
 
 .usernav li a:hover
 {
-    background-color:grey;
+    background-color: #cce5ff;
 }
 
 .nav1
 {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 5%;
+	flex: 0 1 50%;
+	position: fixed;
+	top: 15%;
 	margin-left: 6%;
 	width: 15%;
 	background: #fff;
 	border: 3% solid silver;
-	padding: 1%;
-	
-	width: 15%;
-	flex: 0 1 50%;
-	position: absolute;
-	top: 5%;
 	text-align: center;
-
-}
-
-.nav1 a:link, a:visited {
-    
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
 }
 
 main
@@ -91,15 +84,14 @@ main
 	flex-wrap: wrap;
 	flex: 0 1 50%;
 	position: absolute;
-	width: 60%;
+	width: 65%;
 	overflow: hidden;
-	margin: 25%;
-	margin-top: 5%;
+	margin-left: 25%;
+	top: 15%;
 	padding: 1%;
 	background: #fff;
 	border: 3% solid silver;
 	left: 1%;
-	top: 5%;
 }
 
 ul
@@ -162,7 +154,7 @@ ul
 	padding: 1%;
 	width: 40%;
 	height: 30%;
-	background-color: #34495e;
+	background-color: #3498db;
 	color: #fff;
 	border-radius: 3%;
 	border: 1;
@@ -191,19 +183,21 @@ ul
 	padding: 1%;
 }
 
-.nav1 .imagine
+.nav1 .userimg
+{
+	width: 100%;
+}
+
+.nav1 .userimg .imagine
 {
 	width: 100%;
     height: auto;
-    position: relative;
-    left: -11%;
-
+    position: relative; 
 }
 
 .infotable
 {
-	background-color: grey;
-	top: -20%;
+	background-color: #fff;
 	position: relative;
 	width: 100%;
 }
@@ -213,4 +207,112 @@ ul
 	padding-top: 10%;
 	padding-bottom: 10%;
 	width: 100%;
+}
+
+.info tr 
+{
+	text-align: left;
+}
+
+.info tr td
+{
+	font-size: 100%;
+	width: 100%;
+}
+
+.info tr:not(#ultimul) td
+{
+	padding-bottom: 5%;
+}
+
+.info tr td:not(#datalog), td:not(#dataviz)
+{
+	padding-left: 5%;
+}
+
+.info tr[id="ultimul"] td
+{
+	padding-bottom: 0;
+}
+
+.info tr [id]
+{
+	float: right;
+	padding-right: 10%;
+}
+
+.linknume
+{
+	text-decoration: none;
+	width: 100%;
+	color: black;
+}
+
+#nume
+{
+	width: 100%;
+	font-size: 125%;
+}
+
+@media only screen and (max-width: 1100px){
+	.info tr td
+	{	
+		font-size: 70%;
+	}
+}
+
+@media only screen and (max-width: 900px){
+	.info tr [id]
+	{	
+		padding-right: 0;
+	}
+}
+
+@media only screen and (max-width: 700px){
+	.nav1
+	{
+		display: none;
+	}
+
+	main
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 1 70%;
+		position: absolute;
+		width: 80%;
+		overflow: hidden;
+		margin-left: 10%;
+		top: 15%;
+		background: #fff;
+		border: 3% solid silver;
+	}
+
+	.flex ul
+	{
+		list-style-type: none;
+	}
+
+	.flex label
+	{
+  		padding: 1% 1% 1% 1%;
+  		font-size: 70%;
+  		margin-left: -5%;
+	}
+}
+
+@media only screen and (max-width : 321px) {
+	.flex button
+	{
+		font-size: 80%;
+		margin-left: auto;
+		margin-right: 10%;
+	}	
+}
+
+@media only screen and (min-height: 700px) {
+	.userheader
+	{  
+    	height: 5%; 
+	}	
 }

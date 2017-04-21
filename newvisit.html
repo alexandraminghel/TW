@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Programare vizita</title>
-	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="scheletvisit.css">
 </head>
 <body>
@@ -10,7 +10,9 @@
 
 		<div class = "usernav">
 			<ul>
-				<li class="ceva"><a href="createaccount.html">Contact</a></li>
+				<li><a href="newvisit.html">Acasa</a></li>
+				<li><a href="createaccount.html">Contact</a></li>
+				<li><a href="arhivauser.html">Arhiva</a></li>
 				<li><a href="createaccount.html">Logout</a></li>
 			</ul>
 		</div>
@@ -35,11 +37,11 @@
     		    		</li>
     		    		<li>
       						<label for="talksummary">Natura vizitei</label>
-     	 					<textarea rows="6" id="talksummary" placeholder="Natura vizitei"></textarea>
+     	 					<textarea rows="3" id="talksummary" placeholder="Natura vizitei"></textarea>
     					</li>
     					<li>
       						<label for="objects">Obiecte aduse detinutului </label>
-     	 					<textarea rows="6" id="objects" placeholder="Obiecte aduse detinutului"></textarea>
+     	 					<textarea rows="6" id="objects" placeholder="Obiecte aduse detinutului (separate prin virgula)"></textarea>
     					</li>
     					<li>
       						<label for="related">Relatia cu detinutul</label>
@@ -53,15 +55,21 @@
 	    	</div>
 		</main>
 		<div class = "nav1">
-			<ul>
+			<div class = "userimg">
 				<img src="admin.png" class="imagine">
-			</ul>
+			</div>
+			<a href = "newvisit.html" class = "linknume"><div id = "nume">Popescu Maria</div></a>
 			<div class = "infotable">
-			<table class = "info">
-					<tr><td>Popescu Maria</td></tr>
-					<tr><td>Ultima logare: 19.04.2017</td></tr>
-					<tr><td>Ultima vizita: 14.04.2017</td></tr>
-			</table>
+				<table class = "info">
+					<tr>
+						<td>Ultima logare </td>
+						<td id = "datalog">19.04.2017</td>
+					</tr>
+					<tr id = "ultimul">
+						<td>Ultima vizita </td>
+						<td id = "dataviz">14.04.2017</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>	
