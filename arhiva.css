@@ -1,0 +1,298 @@
+body
+{
+	font-family: 'Arial';
+	background-color: #34495e;
+	display: flex;
+}
+
+.wrap
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.userheader
+{
+	display: flex;
+	position: absolute;
+	left: 0%;
+	top: 0;
+	margin: 0;
+	width: 100%;
+    background: #fff;  
+    height: 8%; 
+}
+
+.usernav
+{
+	display: flex;
+	margin-left: auto;
+	height: 100%;
+}
+
+.usernav ul 
+{
+	display: flex;
+	flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.usernav li
+{
+	float: left;
+	height: 100%;
+	display: inline;
+}
+
+.usernav li a 
+{
+	display: block;
+	padding-top: 15px;
+	padding-right: 14px;
+	padding-left: 14px;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+}
+
+.usernav li a:hover
+{
+    background-color: grey;
+}
+
+.nav1
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 50%;
+	position: fixed;
+	top: 15%;
+	margin-left: 6%;
+	width: 15%;
+	background: #fff;
+	border: 3% solid silver;
+	text-align: center;
+}
+
+main
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 0 1 50%;
+	position: absolute;
+	width: 65%;
+	overflow: hidden;
+	margin-left: 25%;
+	top: 15%;
+	padding: 1%;
+	background: #fff;
+	border: 3% solid silver;
+	left: 1%;
+}
+
+ul
+{
+	list-style: none;
+}
+
+.wrapmain
+{
+	margin: 0 0 0 0;
+	display: flex;
+	flex-direction: column;
+	overflow-x:auto;
+}
+
+.wrapmain h2
+{
+	text-align: center;
+	margin-bottom: 6%;
+}
+
+.vizite
+{
+	display: flex;
+	width: 100%;
+	overflow-x:hidden;
+	overflow-y: hidden;
+}
+
+.vizite tr, th
+{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+
+.vizite td
+{
+	width: 9%;
+	font-size: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: left;
+}
+
+.vizite td:not(:last-child)
+{
+	border-right: thin solid #fff;
+}
+
+.vizite tr:nth-child(even) 
+{
+	background-color: #f2f2f2;
+}
+
+.nav1 .userimg
+{
+	width: 100%;
+}
+
+.nav1 .userimg .imagine
+{
+	width: 100%;
+    height: auto;
+    position: relative; 
+}
+
+.infotable
+{
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+.info
+{
+	padding-top: 10%;
+	padding-bottom: 10%;
+	width: 100%;
+}
+
+.info tr 
+{
+	text-align: left;
+}
+
+.info tr td
+{
+	font-size: 100%;
+	width: 100%;
+}
+
+.info tr:not(#ultimul) td
+{
+	padding-bottom: 5%;
+}
+
+.info tr td:not(#datalog), td:not(#dataviz)
+{
+	padding-left: 5%;
+}
+
+.info tr[id="ultimul"] td
+{
+	padding-bottom: 0;
+}
+
+.info tr [id]
+{
+	float: right;
+	padding-right: 10%;
+}
+
+.linknume
+{
+	text-decoration: none;
+	width: 100%;
+	color: black;
+}
+
+#nume
+{
+	width: 100%;
+	font-size: 125%;
+}
+
+@media only screen and (max-width: 1100px){
+	.info tr td
+	{	
+		font-size: 70%;
+	}
+
+	.vizite tr td, th td
+	{
+		font-size: 70%;	
+	}
+}
+
+@media only screen and (max-width: 900px){
+	.info tr [id]
+	{	
+		padding-right: 0;
+	}
+
+	.vizite tr td, th td
+	{
+		font-size: 65%;	
+	}
+}
+
+@media only screen and (max-width: 700px){
+	.nav1
+	{
+		display: none;
+	}
+
+	main
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 1 70%;
+		position: absolute;
+		width: 80%;
+		overflow: hidden;
+		margin-left: 10%;
+		top: 15%;
+		background: #fff;
+		border: 3% solid silver;
+	}
+
+	.vizite
+	{
+		overflow-x: auto;
+	}
+}
+
+@media only screen and (max-width : 321px) {
+	.usernav li a 
+	{
+		padding-top: 9px;
+		padding-left: 9px;
+		padding-right: 9px;
+	}	
+
+	.usernav ul
+	{
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.usernav
+	{
+		margin: 0;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (min-height: 700px) {
+	.userheader
+	{  
+    	height: 5%; 
+	}	
+}
