@@ -374,13 +374,17 @@ ul
 }
 
 @media only screen and (max-width: 480px){
-	body{
-		flex-direction: column;
+	.sidebar{
+		height: 30%;
+		position: absolute;
 	}
 
-	.sidebar{
-		height: 25%;
-		position: absolute;
+	.sidebar ul
+	{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		margin-top: 1%;
 	}
 
 	.sidebar ul li {
@@ -390,11 +394,27 @@ ul
         padding-bottom: 1%;
     }
 
+    .sidebar ul li a:hover
+    {
+    	color: grey;
+    }
+
     .sidebar {
     	text-align: center;
     }
 
     .continut{
-    	top: 25%;
+    	top: 30%;
+    	align-items: center;
     }
+
+    .optiuni{
+    	flex-direction: column;
+    }
+
+    .optiuni li
+    {
+    	padding-bottom: 1%;
+    }
+
 }
