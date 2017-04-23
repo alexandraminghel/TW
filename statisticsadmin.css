@@ -224,14 +224,13 @@ ul
 	width: 100%;
 	display :flex;
 	flex-direction: row;
-	padding-left: 15%;
+	padding-left: 5%;
 	padding-top: 2%;
 }
 
-.IDsearch
+#IDsearch
 {
-	display: flex;
-	flex-direction: row;
+	padding-right: 10%;
 }
 
 .graphs
@@ -308,10 +307,7 @@ ul
 		padding: 2% 2% 2% 2%;
 	}
 
-	.vizitatori .textviz, .numviz
-	{
-		font-size: 70%;
-	}
+	
 
 	.vizitatori .textviz
 	{
@@ -489,5 +485,13 @@ ul
     .continut{
     	top: 30%;
     	width: 90%;
+    }
+
+    .statisticsid{
+    	flex-direction: column;
+    }
+
+    #IDsearch{
+    	padding-bottom: 5%; 
     }
 }
