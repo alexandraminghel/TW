@@ -1,0 +1,276 @@
+body
+{
+	font-family: 'Arial';
+	background-color: #34495e;
+}
+
+.wrap
+{
+	position: fixed;
+	top: 8%;
+	width: 100%;
+	height: 92%;
+}
+
+.userheader
+{
+	display: flex;
+	position: absolute;
+	left: 0%;
+	top: 0;
+	margin: 0;
+	width: 100%;
+    background: #fff;  
+    height: 8%; 
+}
+
+.usernav
+{
+	display: flex;
+	margin-left: auto;
+	height: 100%;
+}
+
+.usernav ul 
+{
+	display: flex;
+	flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.usernav li
+{
+	float: left;
+	height: 100%;
+	display: inline;
+}
+
+.usernav li a 
+{
+	display: block;
+	padding-top: 15px;
+	padding-right: 14px;
+	padding-left: 14px;
+    color: black;
+    text-decoration: none;
+    height: 100%;
+}
+
+.usernav li a:hover
+{
+    background-color: grey;
+}
+
+.nav1
+{
+	top: 15%;
+	margin-left: 6%;
+	width: 15%;
+	background: #fff;
+	border: 3px solid silver;
+	text-align: center;
+}
+
+main
+{
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	top: 8%;
+	height: 100%;
+	/*background: #fff;*/
+}
+
+ul
+{
+	list-style: none;
+}
+
+.wrapmain
+{
+	position: absolute;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+}
+
+.wrapmain h2
+{
+	text-align: center;
+	margin-bottom: 6%;
+}
+
+.nav1 .userimg
+{
+	width: 100%;
+}
+
+.nav1 .userimg .imagine
+{
+	width: 100%;
+    height: auto;
+    position: relative; 
+}
+
+.infotable
+{
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+}
+
+.info
+{
+	padding-top: 10%;
+	padding-bottom: 10%;
+	width: 100%;
+}
+
+.info tr 
+{
+	text-align: left;
+}
+
+.info tr td
+{
+	font-size: 100%;
+	width: 100%;
+}
+
+.info tr:not(#ultimul) td
+{
+	padding-bottom: 5%;
+}
+
+.info tr td:not(#datalog), td:not(#dataviz)
+{
+	padding-left: 5%;
+}
+
+.info tr[id="ultimul"] td
+{
+	padding-bottom: 0;
+}
+
+.info tr [id]
+{
+	float: right;
+	padding-right: 10%;
+}
+
+.linknume
+{
+	text-decoration: none;
+	width: 100%;
+	color: black;
+}
+
+#nume
+{
+	width: 100%;
+	font-size: 125%;
+}
+
+
+
+@media only screen and (max-width: 700px){
+	.nav1
+	{
+		display: none;
+	}
+
+	main
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 1 70%;
+		position: absolute;
+		width: 80%;
+		overflow: hidden;
+		margin-left: 10%;
+		top: 15%;
+		/*background: #fff;*/
+		border: 3px solid silver;
+	}
+
+}
+
+
+
+@media only screen and (max-width : 300px) {
+	
+	.usernav
+	{
+		margin: 0;
+		width: 100%;
+	}
+
+}
+
+@media only screen and (min-height: 700px) {
+	.userheader
+	{  
+    	height: 5%; 
+	}	
+}
+
+.contents {
+	/*background-color: white;*/
+	width: 100%;
+	height: 40%;
+	
+}
+#content-header {
+	font-size: 10px;
+	color:white;
+	opacity: 1;
+	width: 100%;
+	left: 19.5px;
+	border-bottom: 1px solid #ddd;
+	
+}
+
+.coloane-date {
+	position: relative;
+	width: 760px;
+	height:133px;
+	
+}
+
+section {
+	position: absolute;
+    left: 23%;
+	top: 0%;
+	width: 77%;
+	height: 70%;
+	
+}
+
+.col-contact {
+	font-size: 14px;
+	color:white;
+	position: absolute;
+	display: block;
+	width: 360px;
+	height: 133px;
+	left: 13%;
+	opacity: 1
+	
+}
+
+
+#date-con {
+	left:70%;
+}
+
+#map {
+	height: 390px;
+	width: 80%;	
+	padding: 1%;
+	left: 1%;
+	margin: 1%;
+}
