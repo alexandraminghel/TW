@@ -125,12 +125,6 @@ ul
   	align-items: left;
 }
 
-.flex p
-{
-	flex: 1 0 40%;
-  	max-width: 40%;
-}
-
 .flex ul
 {
 	margin-left: auto;
@@ -138,13 +132,9 @@ ul
 	list-style-type: none;
 }
 
-.flex label,
-.flex p {
-  padding: 1% 1% 1% 1%;
-}
-
-.flex label
+.flex label 
 {
+	padding: 1% 1% 1% 1%;
 	flex: 1 0 30%;
   	max-width: 30%;
 }
@@ -163,17 +153,7 @@ ul
 	margin-right: 6%;
 }
 
-.flex input
-{
-	flex : 1 0 60%;
-	max-width: 60%;
-	border-radius: 2%;
-	margin-bottom: 1%;
-	border: 3% solid silver;
-	padding: 1%;
-}
-
-.flex textarea
+.flex input, textarea
 {
 	flex : 1 0 60%;
 	max-width: 60%;
@@ -255,27 +235,23 @@ ul
 }
 
 @media only screen and (max-width: 1100px){
-	.info tr td
-	{	
+	.info tr td{	
 		font-size: 70%;
 	}
 }
 
 @media only screen and (max-width: 900px){
-	.info tr [id]
-	{	
+	.info tr [id]{	
 		padding-right: 0;
 	}
 }
 
 @media only screen and (max-width: 700px){
-	.nav1
-	{
+	.nav1{
 		display: none;
 	}
 
-	main
-	{
+	main{
 		display: flex;
 		flex-wrap: wrap;
 		flex: 0 1 70%;
@@ -288,53 +264,63 @@ ul
 		border: 3% solid silver;
 	}
 
-	.flex ul
-	{
+	.flex ul{
 		list-style-type: none;
 	}
 
-	.flex label
-	{
+	.flex label{
   		padding: 1% 1% 1% 1%;
   		font-size: 70%;
   		margin-left: -5%;
 	}
+
+	.flex button{
+		margin-right: 10%;
+	}
 }
 
-@media only screen and (max-width : 321px) {
-	.flex button
-	{
+@media only screen and (max-width : 321px){
+	.flex button{
 		font-size: 80%;
 		margin-left: auto;
-		margin-right: 10%;
-	}	
-}
-
-@media only screen and (max-width : 300px) {
-	.usernav li a 
-	{
-		padding-top: 9px;
-		padding-left: 9px;
-		padding-right: 9px;
 	}	
 
-	.usernav ul
-	{
+	.usernav li{
+		padding-top: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
+	}	
+
+	.usernav ul{
 		margin-right: auto;
 		width: 100%;
 	}
 
-	.usernav
-	{
+	.usernav{
 		margin: 0;
 		width: 100%;
 	}
 
+	form{
+		margin-left: -10%;
+		margin-right: 2%;
+	}
+
+	.flex li label{
+		display: none;
+	}
+
+	.flex li input, textarea{
+		max-width: 100%;
+	}
+
+	.flex button{
+		margin-right: 0;
+	}
 }
 
-@media only screen and (min-height: 700px) {
-	.userheader
-	{  
+@media only screen and (min-height: 700px){
+	.userheader{  
     	height: 5%; 
 	}	
 }
