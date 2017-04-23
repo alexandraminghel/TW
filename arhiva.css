@@ -113,6 +113,26 @@ ul
 	margin-bottom: 6%;
 }
 
+.pagination
+{
+	display: flex;
+	flex-direction: row;
+	width: 30%;
+	padding-left: 35%;
+	justify-content: space-around;
+}
+
+.pagination li
+{
+	float: left;
+}
+
+.pagination li a
+{
+	text-decoration: none;
+	color: black;
+}
+
 .vizite
 {
 	display: flex;
@@ -271,9 +291,7 @@ ul
 @media only screen and (max-width : 321px) {
 	.usernav li a 
 	{
-		padding-top: 9px;
-		padding-left: 9px;
-		padding-right: 9px;
+		margin-top: 3%;
 	}	
 
 	.usernav ul
@@ -288,6 +306,11 @@ ul
 		width: 100%;
 	}
 
+	.pagination
+	{
+		width: 50%;
+		padding-left: 25%;
+	}
 }
 
 @media only screen and (min-height: 700px) {
