@@ -13,6 +13,11 @@ body
 	background-color: #34495e;
 }
 
+.nav a
+{
+	text-decoration: none;
+	color: white;
+}
 .imagine
 {
 	width: 30%;
