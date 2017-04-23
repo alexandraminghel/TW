@@ -218,14 +218,42 @@ ul
 	height: 100%;
 }
 
+
+
 @media only screen and (max-width: 1250px) {
 	.optiuni li a
 	{
 		font-size: 80%;
 	}
+
+	.title, .header
+	{
+		height: 9%;
+	}
+
+	.nav, .continut
+	{
+		top: 9%;
+	}
+
+	.text
+	{
+		font-size: 70%;
+	}
+
 }
 
 @media only screen and (max-width: 900px) {
+	.title, .header
+	{
+		height: 8%;
+	}
+
+	.nav, .continut
+	{
+		top: 8%;
+	}
+
 	.optiuni
 	{
 		flex-wrap: wrap;
@@ -234,23 +262,227 @@ ul
 	.optiuni li
 	{
 		padding-top: 1%;
-		padding-bottom: 2%;
 	}
 
 	.optiuni li a
 	{
 		font-size: 70%;
+		padding: 2% 2% 2% 2%;
 	}
+}
+
+
+@media screen and (max-width: 750px){
+    .title
+    {
+    	display: none;
+    }
+
+    .sidebar 
+    {
+        width: 100%;
+        height: 10%;
+        right: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .nav
+    {
+    	padding: 0;
+		top: 0;
+		color: white;
+    }
+
+    .header
+    {
+    	display: none;
+    }
+
+    .sidebar ul li {
+        float: left;
+        top: 0;
+        padding-bottom: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .sidebar ul li a
+    {
+    	text-decoration: none;
+    	color: white;
+    }
+
+    .sidebar ul li img
+    {
+    	display: none;
+    }
+
+    .sidebar .logout
+	{
+		display: block;
+	}
+
+
+    .continut
+    {
+    	left: 0;
+    	right: 0;
+    	width: 90%;
+    	top: 10%;
+    }
 }
 
 @media only screen and (max-width: 650px)
 {
+	.line0
+	{
+		text-align: center;
+	}
+
+	#lm
+	{
+		font-size: 100%;
+	}
+
+	.line1
+	{
+		padding-top: 0;
+		width: 80%;
+		text-align: center;
+	}
+
+	.statisticsid
+	{
+		padding-top: 0;
+		padding-left: 5%;
+	}
+
 	.graphs
 	{
+		padding-top: 2%;
+		padding-left: 10%;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
-		width: 100%;
+		width: 78%;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	body{
+		flex-direction: column;
 	}
 
+	.sidebar{
+		height: 25%;
+		position: absolute;
+	}
+
+	.sidebar ul li {
+		height: 100%;
+        float: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .sidebar {
+    	text-align: center;
+    }
+
+    .continut{
+    	top: 25%;
+    }
+
+    .graphs
+    {
+    	margin-left: 10%;
+    	margin-top: 3%;
+    }
+    .statisticsid
+    {
+    	margin-top: 5%;
+    	margin-left: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+	body{
+		flex-direction: column;
+	}
+
+	.sidebar{
+		height: 25%;
+		position: absolute;
+	}
+
+	.sidebar ul li {
+		height: 100%;
+        float: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .sidebar {
+    	text-align: center;
+    }
+
+    .continut{
+    	top: 25%;
+    }
+
+    .graphs
+    {
+    	margin-left: 10%;
+    	margin-top: 3%;
+    }
+    .statisticsid
+    {
+    	margin-top: 5%;
+    	margin-left: 10%;
+    }
+
+    .optiuni
+    {
+    	margin-left: 8%;
+    }
+}
+
+
+@media only screen and (max-width: 425px){
+	body{
+		flex-direction: column;
+	}
+
+	.sidebar{
+		height: 25%;
+		position: absolute;
+	}
+
+	.sidebar ul li {
+		height: 100%;
+        float: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    .sidebar {
+    	text-align: center;
+    }
+
+    .continut{
+    	top: 25%;
+    }
+
+    .graphs
+    {
+    	margin-left: 10%;
+    	margin-top: 3%;
+    }
+    .statisticsid
+    {
+    	margin-top: 5%;
+    	margin-left: 10%;
+    }
 }
