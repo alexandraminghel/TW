@@ -74,7 +74,7 @@ body
 	margin-left: 6%;
 	width: 15%;
 	background: #fff;
-	border: 3% solid silver;
+	border: 3px solid silver;
 	text-align: center;
 }
 
@@ -90,7 +90,7 @@ main
 	top: 15%;
 	padding: 1%;
 	background: #fff;
-	border: 3% solid silver;
+	border: 3px solid silver;
 	left: 1%;
 }
 
