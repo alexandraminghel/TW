@@ -14,10 +14,10 @@ body
 }
 
 .sidebar ul li a
-    {
-    	text-decoration: none;
-    	color: white;
-    }
+{
+    text-decoration: none;
+    color: white;
+}
 
 .sidebar .logout
 {
@@ -225,51 +225,42 @@ ul
 }
 
 @media only screen and (max-width: 1250px) {
-	.optiuni li a
-	{
+	.optiuni li a{
 		font-size: 80%;
 	}
 
-	.title, .header
-	{
+	.title, .header{
 		height: 9%;
 	}
 
-	.nav, .continut
-	{
+	.nav, .continut{
 		top: 9%;
 	}
 
-	.text
-	{
+	.text{
 		font-size: 70%;
 	}
 
 }
 
-@media only screen and (max-width: 900px) {
-	.title, .header
-	{
+@media only screen and (max-width: 900px){
+	.title, .header{
 		height: 8%;
 	}
 
-	.nav, .continut
-	{
+	.nav, .continut{
 		top: 8%;
 	}
 
-	.optiuni
-	{
+	.optiuni{
 		flex-wrap: wrap;
 	}
 
-	.optiuni li
-	{
+	.optiuni li{
 		padding-top: 1%;
 	}
 
-	.optiuni li a
-	{
+	.optiuni li a{
 		font-size: 70%;
 		padding: 2% 2% 2% 2%;
 	}
@@ -277,13 +268,11 @@ ul
 
 
 @media screen and (max-width: 750px){
-    .title
-    {
+    .title{
     	display: none;
     }
 
-    .sidebar 
-    {
+    .sidebar{
         width: 100%;
         height: 10%;
         right: 0;
@@ -291,19 +280,23 @@ ul
         position: absolute;
     }
 
-    .nav
-    {
+    .nav{
     	padding: 0;
 		top: 0;
 		color: white;
     }
 
-    .header
-    {
+    .header{
     	display: none;
     }
 
-    .sidebar ul li {
+    .sidebar ul{
+    	display: flex;
+    	justify-content: space-around;
+    	padding-right: 5%;
+    }
+
+    .sidebar ul li{
         float: left;
         top: 0;
         padding-bottom: 0;
@@ -311,25 +304,20 @@ ul
         padding-right: 3%;
     }
     
-    .sidebar ul li a
-    {
+    .sidebar ul li a{
     	text-decoration: none;
     	color: white;
     }
 
-    .sidebar ul li img
-    {
+    .sidebar ul li img{
     	display: none;
     }
 
-    .sidebar .logout
-	{
+    .sidebar .logout{
 		display: block;
 	}
 
-
-    .continut
-    {
+    .continut{
     	left: 0;
     	right: 0;
     	width: 90%;
@@ -337,33 +325,31 @@ ul
     }
 }
 
-@media only screen and (max-width: 650px)
-{
-	.line0
-	{
+@media only screen and (max-width: 650px){
+	.sidebar ul li a{
+		font-size: 80%;
+	}
+
+	.line0{
 		text-align: center;
 	}
 
-	#lm
-	{
+	#lm{
 		font-size: 100%;
 	}
 
-	.line1
-	{
+	.line1{
 		padding-top: 0;
 		width: 80%;
 		text-align: center;
 	}
 
-	.statisticsid
-	{
+	.statisticsid{
 		padding-top: 0;
 		padding-left: 5%;
 	}
 
-	.graphs
-	{
+	.graphs{
 		padding-top: 2%;
 		padding-left: 10%;
 		display: flex;
@@ -394,8 +380,11 @@ ul
         padding-bottom: 1%;
     }
 
-    .sidebar ul li a:hover
-    {
+    .sidebar ul li a{
+		font-size: 100%;
+	}
+
+    .sidebar ul li a:hover{
     	color: grey;
     }
 
@@ -412,8 +401,7 @@ ul
     	flex-direction: column;
     }
 
-    .optiuni li
-    {
+    .optiuni li{
     	padding-bottom: 1%;
     }
 

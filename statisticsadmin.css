@@ -13,9 +13,20 @@ body
 	background-color: #34495e;
 }
 
+.sidebar ul li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar .logout
+{
+	display: none;
+}
+
 .imagine
 {
-	width: 30%;
+	width: auto;
     height: 100%;  
 }
 
@@ -33,11 +44,9 @@ body
 	color: white;
 	font-size: 90%;
 	text-transform: uppercase;
-	margin-top: 2%;
-	margin-left: 5%;
-	margin-top: 10%;
-	letter-spacing: 10%;
-	display: block;
+	padding-top: 5%;
+	padding-left: 5%;
+	display: flex;
 }
 
 .nav-item2img
@@ -73,7 +82,7 @@ ul
 {
 	padding: 10%;
 	margin-left: 4%;
-	margin-top: 10%;
+	top: 10%;
 	color: white;
 }
 
@@ -130,7 +139,8 @@ ul
 .continut
 {
 	display: flex;
-	flex: 1 0 100%;
+	flex: 1 0 70%;
+	flex-wrap: wrap;
 	flex-direction: column;
 	width: 70%;
 	position: absolute;
@@ -147,7 +157,7 @@ ul
 
 .optiuni li
 {
-	padding-right: 3%;
+	padding-right: 2%;
 	display: inline;
 	padding-bottom: 0%;
 }
@@ -158,7 +168,7 @@ ul
 	text-transform: uppercase;
 	background-color: #6C7E8F;
 	color: white;
-	padding: 1% 1% 1% 1%;
+	padding: 3% 3% 3% 3%;
 	white-space: nowrap;
 }
 
@@ -230,7 +240,6 @@ ul
 	width: 60%;
 	padding-top: 2%;
 	padding-left: 1%;
-	padding-bottom: 6%;
 }
 
 .img1
@@ -250,12 +259,235 @@ ul
 	{
 		padding-bottom: 3%;
 	}
+
+	.optiuni li a
+	{
+		font-size: 80%;
+	}
+
+	.title, .header
+	{
+		height: 9%;
+	}
+
+	.nav, .continut
+	{
+		top: 9%;
+	}
+
+	.text
+	{
+		font-size: 70%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.title, .header
+	{
+		height: 8%;
+	}
+
+	.nav, .continut
+	{
+		top: 8%;
+	}
+
+	.optiuni
+	{
+		flex-wrap: wrap;
+	}
+
+	.optiuni li
+	{
+		padding-top: 1%;
+	}
+
+	.optiuni li a
+	{
+		font-size: 70%;
+		padding: 2% 2% 2% 2%;
+	}
+
+	.vizitatori .textviz, .numviz
+	{
+		font-size: 70%;
+	}
+
+	.vizitatori .textviz
+	{
+		text-align: center;
+		padding-top: 15%;
+	}
+}
+
+@media screen and (max-width: 750px){
+    .title
+    {
+    	display: none;
+    }
+
+    .sidebar 
+    {
+        width: 100%;
+        height: 10%;
+        right: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .nav
+    {
+    	padding: 0;
+		top: 0;
+		color: white;
+    }
+
+    .header
+    {
+    	display: none;
+    }
+
+    .sidebar ul
+    {
+    	display: flex;
+    	justify-content: space-around;
+    	padding-right: 5%;
+    }
+
+    .sidebar ul li {
+        float: left;
+        top: 0;
+        padding-bottom: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .sidebar ul li a
+    {
+    	text-decoration: none;
+    	color: white;
+    }
+
+    .sidebar ul li img
+    {
+    	display: none;
+    }
+
+    .sidebar .logout
+	{
+		display: block;
+	}
+
+
+    .continut
+    {
+    	left: 0;
+    	width: 75%;
+    	top: 10%;
+    	padding-left: 2%;
+    }
 }
 
 @media only screen and (max-width: 650px) {
-	.graphs
+	.sidebar ul li a
 	{
+		font-size: 80%;
+	}
+
+	.continut
+	{
+		align-items: center;
+	}
+
+	.line1
+	{
+		padding-top: 5%;
+		width: 80%;
 		display: flex;
 		flex-direction: column;
 	}
+
+	.line1 .vizitatori
+	{
+		align-self: center;
+	}
+
+	.vizitatori .textviz, .numviz
+	{
+		font-size: 100%;
+	}
+
+	.line1 .vizitatori .textviz
+	{
+		padding-top: 10%;
+	}
+
+	.statisticsid
+	{
+		padding-top: 5%;
+		padding-left: 5%;
+	}
+
+	.graphs
+	{
+		padding-top: 2%;
+		padding-left: 10%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 78%;
+	}
+
+	.optiuni
+	{
+    	flex-direction: column;
+    }
+
+    .optiuni li
+    {
+    	padding-bottom: 5%;
+    }
+
+    .optiuni li a
+    {
+    	font-size: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+	.sidebar{
+		height: 30%;
+		position: absolute;
+		text-align: center;
+	}
+
+	.sidebar ul
+	{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		margin-top: 1%;
+	}
+
+	.sidebar ul li {
+		height: 100%;
+        float: none;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+	.sidebar ul li a
+	{
+		font-size: 100%;
+	}
+
+    .sidebar ul li a:hover
+    {
+    	color: grey;
+    }
+
+    .continut{
+    	top: 30%;
+    	width: 90%;
+    }
 }
