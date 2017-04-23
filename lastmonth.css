@@ -40,7 +40,7 @@ body
 	text-transform: uppercase;
 	padding-top: 5%;
 	margin-left: 5%;
-	letter-spacing: 10%;
+	letter-spacing: 1px%;
 	display: block;
 }
 
