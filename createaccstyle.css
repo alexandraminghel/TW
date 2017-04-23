@@ -13,7 +13,7 @@ body
 	left: 25%;
 	padding: 1%;
 	background: #fff;
-	border: 3% solid silver;
+	border: thin solid silver;
 	border-radius: 2%;
 }
 
@@ -32,7 +32,6 @@ body
 {
 	display: flex;
   	flex-wrap: wrap;
-  	align-items: left;
   	padding-bottom: 3%;
 }
 
@@ -62,7 +61,6 @@ body
 	background-color: #34495e;
 	color: #fff;
 	border-radius: 3%;
-	border: 1;
 	font-size: 130%;
 	margin-left: auto;
 	margin-right: 6%;
@@ -74,7 +72,7 @@ body
 	max-width: 60%;
 	border-radius: 2%;
 	margin-bottom: 1%;
-	border: 3% solid silver;
+	border: 2px solid silver;
 	padding: 1%;
 }
 

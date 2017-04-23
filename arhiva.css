@@ -74,7 +74,7 @@ body
 	margin-left: 6%;
 	width: 15%;
 	background: #fff;
-	border: 3% solid silver;
+	border: thin solid silver;
 	text-align: center;
 }
 
@@ -90,7 +90,7 @@ main
 	top: 15%;
 	padding: 1%;
 	background: #fff;
-	border: 3% solid silver;
+	border: thin solid silver;
 	left: 1%;
 }
 
@@ -279,7 +279,7 @@ ul
 		margin-left: 10%;
 		top: 15%;
 		background: #fff;
-		border: 3% solid silver;
+		border: thin solid silver;
 	}
 
 	.vizite

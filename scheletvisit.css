@@ -122,7 +122,6 @@ ul
 {
 	display: flex;
   	flex-wrap: wrap;
-  	align-items: left;
 }
 
 .flex ul
@@ -147,7 +146,6 @@ ul
 	background-color: #34495e;
 	color: #fff;
 	border-radius: 3%;
-	border: 1;
 	font-size: 100%;
 	margin-left: auto;
 	margin-right: 6%;
@@ -159,7 +157,7 @@ ul
 	max-width: 60%;
 	border-radius: 2%;
 	margin-bottom: 1%;
-	border: 3% solid silver;
+	border: thin solid silver;
 	padding: 1%;
 }
 
@@ -261,7 +259,7 @@ ul
 		margin-left: 10%;
 		top: 15%;
 		background: #fff;
-		border: 3% solid silver;
+		border: thin solid silver;
 	}
 
 	.flex ul{
