@@ -138,6 +138,12 @@ ul
         color: white;
 }
 
+.nav a{
+	text-decoration: none;
+	color: white;
+	
+}
+
 .nav-item1
 {
 	padding-bottom: 20%;
