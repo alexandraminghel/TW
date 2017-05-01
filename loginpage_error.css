@@ -1,0 +1,249 @@
+body
+{
+	margin: 0%;
+	padding: 0%;
+	font-family: 'Arial';
+	background-color: #34495e;
+}
+
+a:link, a:visited {
+    
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.eroare
+{
+	position: fixed;
+	margin-top: -5%;
+	margin-left: 35%;
+	color: white;
+}
+
+.wrap
+{
+
+	width: 31%;
+	overflow: hidden;
+	margin: 31%;
+	margin-top: 10%;
+	padding: 1%;
+	background: #fff;
+	border: 3px solid silver;
+	border-radius: 2%;
+}
+
+.wrap h2
+{
+	text-align: center;
+	margin-bottom: 6%;
+}
+
+.wrap input
+{
+	width: 95%;
+	height: 35%;
+	margin-bottom: 2%;
+	border-radius: 2%;
+	border: 3px solid silver;
+	padding: 2%;
+}
+
+.wrap .btn-login
+{
+	padding: 1%;
+	width: 49%;
+	height: 35%;
+	background-color: #34495e;
+	color: #fff;
+	border-radius: 3%;
+	font-size: 150%;
+}
+
+.wrap .btn-c
+{
+	padding: 1%;
+	width: 49%;
+	height: 35%;
+	background-color: #34495e;
+	color: #fff;
+	border-radius: 3%;
+	font-size: 150%;
+}
+
+
+.detalii
+{
+	position: absolute;
+	top: 65%;
+	left: 37%;
+    right: 20%;
+    color: #fff;
+}
+
+@media only screen and (max-width : 320px){
+	.wrap
+	{
+		margin-top: 90%;
+		margin-left: 25%;
+		width: 50%;
+		top: 20%;
+		position: fixed;
+	}
+
+	.btn-login
+	{
+		margin-left: 25%;
+
+	}
+
+
+	.btn-c
+	{
+		margin-left: 25%;
+	}
+
+	.wrap .btn-login
+	{
+		font-size: 80%;
+
+	}
+
+	.wrap .btn-c
+	{
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width : 375px){
+	.wrap
+	{
+		margin-top: 30%;
+		margin-left: 25%;
+		width: 50%;
+		position: fixed;
+		top: 15%;
+	}
+
+	.btn-login
+	{
+		margin-left: 25%;
+		
+	}
+
+	.btn-c
+	{
+		margin-left: 25%;
+	}
+
+	.detalii
+	{
+		margin-top: 20%;
+	}
+
+		.wrap .btn-login
+	{
+		font-size: 80%;
+
+	}
+
+	.wrap .btn-c
+	{
+		font-size: 80%;
+	}
+}
+
+
+@media only screen and (max-width : 425px){
+	.wrap
+	{
+		margin-top: 30%;
+		margin-left: 25%;
+		width: 50%;
+		position: fixed;
+		top: 15%;
+	}
+
+	.btn-login
+	{
+		margin-left: 25%;
+		
+	}
+
+	.btn-c
+	{
+		margin-left: 25%;
+	}
+
+	.detalii
+	{
+		margin-top: 20%;
+	}
+
+		.wrap .btn-login
+	{
+		font-size: 80%;
+
+	}
+
+	.wrap .btn-c
+	{
+		font-size: 80%;
+	}
+}
+
+
+@media only screen and (max-width : 768px){
+	.wrap
+	{
+		margin-top: 10%;
+		margin-left: 25%;
+		width: 50%;
+	}
+
+	.btn-login
+	{
+		margin-left: 25%;
+		
+	}
+
+	.btn-c
+	{
+		margin-left: 25%;
+	}
+
+	.detalii
+	{
+		margin-top: 10%;
+		margin-left: -5%;
+	}
+}
+
+
+@media only screen and (max-width : 1024px){
+	.wrap
+	{
+		margin-top: 10%;
+		margin-left: 25%;
+		width: 50%;
+	}
+
+	.btn-login
+	{
+		margin-left: 25%;
+		
+	}
+
+	.btn-c
+	{
+		margin-left: 25%;
+	}
+
+	.detalii
+	{
+		margin-top: 1%;
+		margin-left: -1%;
+	}
+}
