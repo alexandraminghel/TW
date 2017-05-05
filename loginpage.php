@@ -4,14 +4,14 @@ session_start();
 if(isset($_POST['buton-login']))
 {
 	require ('connection.php');
-	$Nume=$_POST["username"];
+	$Email=$_POST["email"];
 	$Password=$_POST["password"];
-	$sql="Select * from users where '$Nume'=Nume and '$Password'=Parola";
+	$sql="Select * from users where '$Email'=EMAIL and '$Password'=PAROLA";
 	$result=mysqli_query($conn,$sql) or die(mysqli_error($conn));
 	$count = mysqli_num_rows($result);
 	if ($count== 1)
 {
-	$_SESSION['username']=$Nume;
+	$_SESSION['email']=$Email;
 	header('Location: newvisit.php');
 }
 
@@ -44,7 +44,7 @@ else
 	<h2>
 		Login 
 	</h2>
-	<input type="text" name="username" placeholder="Your username">
+	<input type="text" name="email" placeholder="Your email">
 	<input type="password" name="password" placeholder="Your password">
 	<button class="btn-login" name="buton-login">Login</button>
 	<button class="btn-c"> <a href="createaccount.html">Creare cont</a></button>
