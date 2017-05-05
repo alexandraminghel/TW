@@ -1,0 +1,4 @@
+-tabela users: id, nume, prenume, email, parola, telefon, poza
+-tabela detinuti: id, nume, prenume, data_nastere, data_incarcerare, pedeapsa, crima
+-tabela vizite: id, id_vizitator, id_detinut, data, natura_vizitei, rezumatul_discutiei, obiecte_aduse, relatia_detinut, ora, durata, id_martor, obiecte_oferite, stare_spirit, stare_sanatate
+-tabela programari: id, id_vizitator, id_detinut, data, natura_vizitei, rezumatul_discutiei, obiecte_aduse 
