@@ -8,34 +8,34 @@
 <body>
 	<div class = "wrap">
         <h2>Creare cont</h2>
-	    <form action="createacc.php" method="post">
+	    <form action="createaccount.php" method="post">
 		    <ul class="flex">
                 <li>
-                    <button type="file" class = "poza">Adauga poza</button>
+                    <button type="file" class = "poza" name="poza" >Adauga poza</button>
                 </li>
 		  	    <li>
 		  	       <label for="lastname">Nume</label>
-      			   <input type="text" id="lastname" placeholder="Nume">
+      			   <input type="text" id="lastname" placeholder="Nume" name="nume"  required>
     		    </li>
     		    <li>
     			   <label for="firstname">Prenume</label>
-    			   <input type="text" id="firstname" placeholder="Prenume">
+    			   <input type="text" id="firstname" placeholder="Prenume" name="prenume"  required>
     		    </li>
     		    <li>
     			   <label for="email">Adresa email</label>
-    			   <input type="text" name="email" placeholder="Adresa email">
+    			   <input type="text" name="email" placeholder="Adresa email"  required>
     		    </li>
     		    <li>
     			   <label for="password">Parola</label>
-    			   <input type="password" name="password" placeholder="Parola">
+    			   <input type="password" name="parola1" placeholder="Parola"  required>
     		    </li>
     		    <li>
     			   <label for="repassword">Reintroduceti parola</label>
-    			   <input type="password" name="repassword" placeholder="Reintroduceti parola">
+    			   <input type="password" name="parola2" placeholder="Reintroduceti parola"  required>
     		    </li>
     		    <li>
     			   <label for="phonenumber">Numar telefon</label>
-    			   <input type="text" name="phonenumber" placeholder="Numar telefon">
+    			   <input type="text" name="telefon" placeholder="Numar telefon"  required>
     		    </li>
     		    <li>
     			   <button type="submit">Creare cont</button>

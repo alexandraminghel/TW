@@ -4,6 +4,13 @@ body
 	background-color: #34495e;
 }
 
+.c
+{
+	position: absolute;
+	left: 48%;
+	top: 4%;
+	color: white;
+}
 .wrap
 {
 	position: absolute;
