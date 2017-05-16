@@ -3,6 +3,8 @@ session_start();
 require ('connection.php');
 $Email=$_POST["email"];
 $Password=$_POST["password"];
+$_SESSION['email']=$Email;
+
 	$sql1="Select * from users where '$Email'=EMAIL";
 	$sql2="Select parola from users where '$Email'=EMAIL";
 	$result1=mysqli_query($conn,$sql1) or die(mysqli_error($conn));
