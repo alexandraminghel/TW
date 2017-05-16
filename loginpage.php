@@ -4,7 +4,11 @@ require ('connection.php');
 $Email=$_POST["email"];
 $Password=$_POST["password"];
 $_SESSION['email']=$Email;
-
+	
+	if($Email=='admin' && $Password=='admin')
+		header('Location:admin.html');
+	else
+	{
 	$sql1="Select * from users where '$Email'=EMAIL";
 	$sql2="Select parola from users where '$Email'=EMAIL";
 	$result1=mysqli_query($conn,$sql1) or die(mysqli_error($conn));
@@ -23,6 +27,6 @@ $_SESSION['email']=$Email;
 	header('Location: newvisit.html');
 	else
 	header('Location: loginpage_error.html');
-	
+	}
 
 ?>
