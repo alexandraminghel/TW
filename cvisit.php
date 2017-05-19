@@ -4,7 +4,7 @@ require ('connection.php');
 
 $added = 0;
 $message = "";
-
+$email = $_SESSION['email'];
 
 if (! (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["date"]) && isset($_POST["reasonforvisit"]) && isset($_POST["related"])))
 	$message = "Atentie! Campuri obligatorii necompletate!";
@@ -33,27 +33,38 @@ else {
 
 		$date_current = date('Y-m-d H:i:s', time());
 
-		if ($date_current > $date_format)
+		if ($date_current > $date_format) {
 			$message = "Programarea trebuie facuta cu cel putin o zi inainte!";
-
+		} 
 		else {
 			mysqli_free_result($result);
 			$result = mysqli_query($conn, $query);
 			$row = mysqli_fetch_row($result);
 			$id_detinut = $row[0];
-			$id_user = '1'; //cum tinem minte username sau id pentru user conectat?
+			$query = "SELECT id FROM users where email like '$email'";
+			mysqli_free_result($result);
+			$result = mysqli_query($conn, $query);
+			$row = mysqli_fetch_row($result);
+			$id_user = $row[0]; 
 			$reason = $_POST["reasonforvisit"];
 			
-			if ($_POST["objects"] == "")
+			if ($_POST["objects"] == "") {
 				$object = "-";
-			else $object = $_POST["objects"];
+			}
+			else { 
+				$object = $_POST["objects"];
+			}
 
 			$talksummary = "-";
 
-			if (strtolower($_POST["related"]) == "avocat" && !isset($_POST["talksummary"]))
+			if (strtolower($_POST["related"]) == "avocat" && !isset($_POST["talksummary"])) {
 					$talksummary = "-";
-			else $talksummary = $_POST["talksummary"]; 
+			}
+			else {
 
+				$talksummary = $_POST["talksummary"]; 
+			}
+			
 			$related = $_POST["related"];
 			$date_string = date_format($date_format,"Y/m/d H:i:s");
 
@@ -63,8 +74,6 @@ else {
 			$message = "Programare introdusa.";
 		}
 	}
-
-	//echo $message;
 }
 ?>
 
