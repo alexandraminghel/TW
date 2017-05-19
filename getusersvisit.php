@@ -21,7 +21,7 @@ if ($nr_progs == 0) {
     echo $message;
 }
 else {
-	$limit = 1;
+	$limit = 2;
 	$pages = ceil($nr_progs / $limit);
 
 	if ( isset($_GET["page"]) ) {
@@ -48,16 +48,18 @@ else {
 
 			if( $page == $pages ) {
         		$last = $page - 1;
+                echo "<div class = \"pagination\">";
         		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a>";
+                echo "</div>";
      		}
 
      		else {
         		$last = $page - 1;
         		$page = $page + 1;
-        		echo "<div class = "movelinks">";
+        		echo "<div class = \"pagination\">";
         		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a> | ";
         		echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
-        		echo "</div";
+        		echo "</div>";
         	}
     	}
 
@@ -66,8 +68,9 @@ else {
     		if ($pages > $page) {
     			$page = $page + 1;
     		}
-
+            echo "<div class = \"pagination\">";
         	echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
+            echo "</div>";
     	}
 
 		echo "<table class = \"vizite\">";
