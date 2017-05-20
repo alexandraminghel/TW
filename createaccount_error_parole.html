@@ -9,11 +9,12 @@
 <div class="c">Parole diferite!</div>
     <div class = "wrap">
         <h2>Creare cont</h2>
-        <form action="createaccount.php" method="post">
-            <ul class="flex">
-                <li>
-                    <button type="file" class = "poza" name="poza" >Adauga poza</button>
-                </li>
+         <form enctype="multipart/form-data" action="createaccount.php" method="post">
+        <ul class="flex">
+       
+          <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+    Adauga poza: <input name="poza" type="file" />
+      
                 <li>
                    <label for="lastname">Nume</label>
                    <input type="text" id="lastname" placeholder="Nume" name="nume"  required>

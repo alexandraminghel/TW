@@ -24,6 +24,12 @@ body
 	border-radius: 2%;
 }
 
+.poza
+{
+	padding-left: 7%;
+	padding-bottom: 2%;
+}
+
 .wrap h2
 {
 	text-align: center;
@@ -79,7 +85,6 @@ body
 	max-width: 60%;
 	border-radius: 2%;
 	margin-bottom: 1%;
-	border: 2px solid silver;
 	padding: 1%;
 }
 
