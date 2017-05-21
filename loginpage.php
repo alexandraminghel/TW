@@ -6,7 +6,7 @@ $Password=$_POST["password"];
 $_SESSION['email']=$Email;
 	
 	if($Email=='admin' && $Password=='admin')
-		header('Location:admin.html');
+		header('Location:admin.php');
 	else
 	{
 	$sql1="Select * from users where '$Email'=EMAIL";
@@ -24,7 +24,7 @@ $_SESSION['email']=$Email;
 		header('Location:loginpage_error_email.html');
 	else
 	if ($isPasswordCorrect==1)
-	header('Location: newvisit.html');
+	header('Location: newvisit.php');
 	else
 	header('Location: loginpage_error.html');
 	}
