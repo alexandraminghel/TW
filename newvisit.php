@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programare vizita</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="scheletvisit.css">
+</head>
+<body>
+  <div class = "userheader">
+
+    <div class = "usernav">
+      <ul>
+        <li><a href="newvisit.php">Acasa</a></li>
+        <li><a href="users-contact.html">Contact</a></li>
+        <li><a href="arhivausers.php">Arhiva</a></li>
+        <li><a href="loginpage.html">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class = "wrap">
+    <main>
+      <div class = "wrapmain">
+        <h2>Programare vizita</h2>
+          <form action="addnewvisit.php" method="post">
+            <ul class="flex">
+                <li>
+                    <label for="lastname">Nume detinut</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Numele de familie">
+                </li>
+                <li>
+                  <label for="firstname">Prenume detinut</label>
+                  <input type="text" id="firstname" name="firstname" placeholder="Prenumele">
+                </li>
+                <li>
+                  <label for="date">Data vizitei</label>
+                  <input type="text" name="date" name="date" placeholder="Data (aaa-ll-zz)">
+                </li>
+                <li>
+                  <label for="reasonforvisit">Natura vizitei</label>
+                <textarea rows="3" id="reasonforvisit" name="reasonforvisit" placeholder="Natura vizitei"></textarea>
+              </li>
+                <li>
+                  <label for="talksummary">Rezumatul discutiei</label>
+                <textarea rows="3" id="talksummary" name="talksummary" placeholder="Rezumatul discutiei"></textarea>
+              </li>
+              <li>
+                  <label for="objects">Obiecte aduse detinutului </label>
+                <textarea rows="6" id="objects" name="objects" placeholder="Obiecte aduse detinutului (maxim 3,separate prin virgula)"></textarea>
+              </li>
+              <li>
+                  <label for="related">Relatia cu detinutul</label>
+                <input id="related" name="related" placeholder="Relatia cu detinutul"></input>
+              </li>
+                <li>
+                  <button type="submit">Adauga programare</button>
+                </li>
+            </ul>
+          </form>
+        </div>
+    </main>
+    <?php
+      require('infouser.php');
+    ?>
+  </div>  
+</body>
+</html>

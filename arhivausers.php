@@ -9,9 +9,9 @@
 	<div class = "userheader">
 		<div class = "usernav">
 			<ul>
-				<li><a href="newvisit.html">Acasa</a></li>
+				<li><a href="newvisit.php">Acasa</a></li>
 				<li><a href="users-contact.html">Contact</a></li>
-				<li><a href="arhivauser.html">Arhiva</a></li>
+				<li><a href="arhivauser.php">Arhiva</a></li>
 				<li><a href="loginpage.html">Logout</a></li>
 			</ul>
 		</div>
@@ -25,24 +25,9 @@
 				?>
 	    	</div>
 		</main>
-		<div class = "nav1">
-			<div class = "userimg">
-				<img src="admin.png" class="imagine">
-			</div>
-			<a href = "newvisit.html" class = "linknume"><div id = "nume">Popescu Maria</div></a>
-			<div class = "infotable">
-				<table class = "info">
-					<tr>
-						<td>Ultima logare </td>
-						<td id = "datalog">19.04.2017</td>
-					</tr>
-					<tr id = "ultimul">
-						<td>Ultima vizita </td>
-						<td id = "dataviz">14.04.2017</td>
-					</tr>
-				</table>
-			</div>
-		</div>
+		<?php
+			require('infouser.php');
+		?>
 	</div>	
 </body>
 </html>
