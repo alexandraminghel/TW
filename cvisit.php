@@ -16,8 +16,11 @@ else {
 	$lastname = $_POST["lastname"];
 	$firstname = $_POST["firstname"];
 
-	$query = "SELECT id FROM detinuti WHERE nume like '$lastname' AND prenume like '$firstname'";
-	$result = mysqli_query($conn, $query);
+	$query = $conn->prepare('SELECT id FROM detinuti WHERE nume like ? AND prenume like ?');
+	$query->bind_param('ss', $lastname, $firstname);
+
+	$query->execute();
+	$result = $query->get_result();
 
 	if (mysqli_num_rows($result) == 0) {
 		$message = "Detinutul cu numele $lastname $firstname nu se afla in baza de date.";
@@ -36,43 +39,66 @@ else {
 		if ($date_current > $date_format) {
 			$message = "Programarea trebuie facuta cu cel putin o zi inainte!";
 		} 
+
 		else {
-			mysqli_free_result($result);
-			$result = mysqli_query($conn, $query);
 			$row = mysqli_fetch_row($result);
 			$id_detinut = $row[0];
-			$query = "SELECT id FROM users where email like '$email'";
+			$query = $conn->prepare('SELECT id FROM users where email like ?');
+			$query->bind_param('s', $email);
+			$query->execute();
+
 			mysqli_free_result($result);
-			$result = mysqli_query($conn, $query);
+			$result = $query->get_result();
+
 			$row = mysqli_fetch_row($result);
 			$id_user = $row[0]; 
-			$reason = $_POST["reasonforvisit"];
-			
-			if ($_POST["objects"] == "") {
-				$object = "-";
-			}
-			else { 
-				$object = $_POST["objects"];
-			}
 
-			$talksummary = "-";
-
-			if (strtolower($_POST["related"]) == "avocat" && !isset($_POST["talksummary"])) {
-					$talksummary = "-";
-			}
-			else {
-
-				$talksummary = $_POST["talksummary"]; 
-			}
-			
-			$related = $_POST["related"];
 			$date_string = date_format($date_format,"Y/m/d H:i:s");
 
-			$query = "INSERT INTO programari(ID_VIZITATOR, ID_DETINUT, DATA_VIZITEI,  NATURA_VIZITEI, REZUMATUL_DISCUTIEI, OBIECTE_ADUSE, RELATIA_DETINUT) VALUES ('$id_user', '$id_detinut', '$date_string', '$reason', '$talksummary', '$object', '$related')";
+			$query = $conn->prepare('SELECT count(id) FROM programari where id_vizitator like ? and id_detinut like ? and data_vizitei like ?');
+			$query->bind_param('iis', $id_user, $id_detinut, $date_string);
+			$query->execute();
 
-			$result = mysqli_query($conn, $query);
-			$message = "Programare introdusa.";
-		}
+			mysqli_free_result($result);
+			$result = $query->get_result();
+
+ 			if (mysqli_num_rows($result) > 0) {
+				$message = "Aveti deja o programare pentru data respectiva la detinutul $lastname $firstname";
+			}
+
+			else {
+				$reason = $_POST["reasonforvisit"];
+			
+				if ($_POST["objects"] == "") {
+					$object = "-";
+				}
+
+				else { 
+					$object = $_POST["objects"];
+				}
+
+				$talksummary = "-";
+
+				if (strtolower($_POST["related"]) == "avocat" && !isset($_POST["talksummary"])) {
+						$talksummary = "-";
+				}
+
+				else {
+					$talksummary = $_POST["talksummary"]; 
+				}
+			
+				$related = $_POST["related"];
+
+				$query = $conn->prepare('INSERT INTO programari(ID_VIZITATOR, ID_DETINUT, DATA_VIZITEI, NATURA_VIZITEI, REZUMATUL_DISCUTIEI, OBIECTE_ADUSE, RELATIA_DETINUT) VALUES (?, ?, ?, ?, ?, ?, ?)');
+
+				$query->bind_param('iisssss', $id_user, $id_detinut, $date_string, $reason, $talksummary, $object, $related);
+				$query->execute();
+
+				mysqli_free_result($result);
+				$result = $query->get_result();
+				$message = "Programare introdusa.";
+			}
+		}	
 	}
 }
 ?>
