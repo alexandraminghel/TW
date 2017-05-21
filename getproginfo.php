@@ -1,6 +1,8 @@
 <?php 
 session_start();
-require('connection.php');
+require_once ('connection.php');
+require_once ('userobject.php');
+require_once ('detinutobject.php');
 
 if (isset($_GET['id'])) {
 	$prog_id = $_GET['id'];
@@ -20,25 +22,15 @@ if (isset($_GET['id'])) {
 		$result = $query->get_result();
 		$row = $result->fetch_assoc();
 
-		$query2 = $conn->prepare('SELECT NUME, PRENUME FROM USERS WHERE ID = ?');
-		$query2->bind_param('i', $row['ID_VIZITATOR']);
-		$query2->execute();
-
-		$result2 = $query2->get_result();
-		$row2 = $result2->fetch_assoc();
+		$user = new User($row['ID_VIZITATOR'], $conn);
 
 		echo "<form action=\"addcompleteinfo.php?id=".$prog_id."\" method=\"POST\">
 					<div id=\"informatiiuser\">
-						<div id=\"numeviz\"><p>Nume vizitator: </p><p id=\"numev\">".$row2['NUME']." ".$row2['PRENUME']."</p></div>";
+						<div id=\"numeviz\"><p>Nume vizitator: </p><p id=\"numev\">".$user->nume."</p></div>";
 
-		$query2 = $conn->prepare('SELECT NUME, PRENUME FROM DETINUTI WHERE ID = ?');
-		$query2->bind_param('i', $row['ID_DETINUT']);
-		$query2->execute();
+		$detinut = new Detinut($row['ID_DETINUT'], $conn);
 
-		$result2 = $query2->get_result();
-		$row2 = $result2->fetch_assoc();
-
-		echo "<div id=\"numedet\"><p>Nume detinut: </p><p id=\"numedetv\">".$row2['NUME']." ".$row2['PRENUME']."</p></div>
+		echo "<div id=\"numedet\"><p>Nume detinut: </p><p id=\"numedetv\">".$detinut->nume."</p></div>
 			  <div id=\"data\"><p>Data vizitei: </p><p id=\"datav\">".$row['DATA_VIZITEI']."</p></div>
 			  <div id=\"motiv\"><p>Natura vizitei: </p><p id=\"motivv\">".$row['NATURA_VIZITEI']."</p></div>
 			  <div id=\"rezumat\"><p>Rezumatul discutiei: </p><p id=\"rezumatv\">".$row['REZUMATUL_DISCUTIEI']."</p></div>

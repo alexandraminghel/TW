@@ -1,10 +1,14 @@
 <?php 
 session_start();
-require ('connection.php');
+require_once ('userobject.php');
+require_once ('detinutobject.php');
+require_once ('functions.php');
+require_once ('connection.php');
 
 $added = 0;
 $message = "";
 $email = $_SESSION['email'];
+$user = new User($email, $conn);
 
 if (! (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["date"]) && isset($_POST["reasonforvisit"]) && isset($_POST["related"])))
 	$message = "Atentie! Campuri obligatorii necompletate!";
@@ -16,18 +20,10 @@ else {
 	$lastname = $_POST["lastname"];
 	$firstname = $_POST["firstname"];
 
-	$query = $conn->prepare('SELECT id FROM detinuti WHERE nume like ? AND prenume like ?');
-	$query->bind_param('ss', $lastname, $firstname);
+	$detinut = new Detinut($lastname, $firstname, $conn);
 
-	$query->execute();
-	$result = $query->get_result();
-
-	if (mysqli_num_rows($result) == 0) {
+	if ($detinut->id == 0) {
 		$message = "Detinutul cu numele $lastname $firstname nu se afla in baza de date.";
-	}
-
-	else if (mysqli_num_rows($result) > 1) {
-		$message = "Mai multi detinuti cu acelasi nume";
 	}
 
 	else {
@@ -41,22 +37,10 @@ else {
 		} 
 
 		else {
-			$row = mysqli_fetch_row($result);
-			$id_detinut = $row[0];
-			$query = $conn->prepare('SELECT id FROM users where email like ?');
-			$query->bind_param('s', $email);
-			$query->execute();
-
-			mysqli_free_result($result);
-			$result = $query->get_result();
-
-			$row = mysqli_fetch_row($result);
-			$id_user = $row[0]; 
-
 			$date_string = date_format($date_format,"Y/m/d H:i:s");
 
 			$query = $conn->prepare('SELECT count(id) FROM programari where id_vizitator like ? and id_detinut like ? and data_vizitei like ?');
-			$query->bind_param('iis', $id_user, $id_detinut, $date_string);
+			$query->bind_param('iis', $user->id, $detinut->id, $date_string);
 			$query->execute();
 
 			mysqli_free_result($result);
@@ -91,7 +75,7 @@ else {
 
 				$query = $conn->prepare('INSERT INTO programari(ID_VIZITATOR, ID_DETINUT, DATA_VIZITEI, NATURA_VIZITEI, REZUMATUL_DISCUTIEI, OBIECTE_ADUSE, RELATIA_DETINUT) VALUES (?, ?, ?, ?, ?, ?, ?)');
 
-				$query->bind_param('iisssss', $id_user, $id_detinut, $date_string, $reason, $talksummary, $object, $related);
+				$query->bind_param('iisssss', $user->id, $detinut->id, $date_string, $reason, $talksummary, $object, $related);
 				$query->execute();
 
 				mysqli_free_result($result);
