@@ -78,7 +78,7 @@ if (! $result) {
         while ($row = $result->fetch_assoc())
         {
         $id_viz=$row['ID_VIZ'];
-		echo "<tr><td><a href=\"addnewvisit.php?id='$id_viz'\">".$row['NUME_VIZ']." ".$row['PRENUME_VIZ']."</td><td>".$row['NUME_DET']." ".$row['PRENUME_DET']."</td>";
+		echo "<tr><td><a href=\"addvisit.php?id=$id_viz\">".$row['NUME_VIZ']." ".$row['PRENUME_VIZ']."</td><td>".$row['NUME_DET']." ".$row['PRENUME_DET']."</td>";
 
         }
 
