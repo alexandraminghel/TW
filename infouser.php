@@ -13,7 +13,7 @@ $ultima_viz = getLastVisit($user->id, $conn);
 
 echo "<div class = \"nav1\">
       <div class = \"userimg\">
-        <img src=\"admin.png\" class=\"imagine\">
+        <img src=\"".$user->poza."\" class=\"imagine\">
       </div>
       <a href = \"newvisit.php\" class = \"linknume\"><div id = \"nume\">".$user->nume."</div></a>
       <div class = \"infotable\">
