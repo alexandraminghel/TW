@@ -1,20 +1,19 @@
 <?php  
 session_start();
-require ('connection.php');
-//require ('functions.php');
+require_once ('connection.php');
+require_once ('userobject.php');
+require_once ('detinutobject.php');
+
 $email = $_SESSION['email'];
 $message = "";
+$user = new User($email, $conn);
 
-$query = "SELECT id FROM users where email like '$email'";
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_row($result);
-$id_viz = $row[0];
-
-$query = "SELECT count(*) FROM programari where id_vizitator like '$id_viz'";
-mysqli_free_result($result);
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_row($result);
-$nr_progs = $row[0];
+$query = $conn->prepare('SELECT count(*) as "nr" FROM programari where id_vizitator like ?');
+$query->bind_param('i', $user->id);
+$query->execute();
+$result = $query->get_result();
+$row = $result->fetch_assoc();
+$nr_progs = $row['nr'];
 
 if ($nr_progs == 0) {
  	$message = "Nu aveti inca nici o vizita realizata.";
@@ -34,11 +33,13 @@ else {
     	$offset = 0;
 	}
 
-	$query = "SELECT p.id as \"ID\", d.nume as \"NUME\", d.prenume as \"PRENUME\", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT FROM programari p join detinuti d on p.id_detinut = d.id where p.id_vizitator like '$id_viz' LIMIT $limit OFFSET $offset";
+	$query = $conn->prepare('SELECT p.id as "ID", d.nume as "NUME", d.prenume as "PRENUME", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT FROM vizite p join detinuti d on p.id_detinut = d.id where p.id_vizitator like ? LIMIT ? OFFSET ?');
 	mysqli_free_result($result);
-	$result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
+    $query->bind_param('iii', $user->id, $limit, $offset);
+    $query->execute();
+    $result = $query->get_result();
 
-	if (! $result) {
+	if (mysqli_num_rows($result) == 0) {
     	$message = "Nu aveti inca nici o vizita realizata";
     	echo $message;
 	}
