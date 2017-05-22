@@ -18,34 +18,34 @@ require_once('cautavizitedet.php');
 		<ul class = "nav">
 			<li class = "nav-item1">
 				<img src = "acasa.png" class = "nav-item1img">
-				<a href = "#">Pagina de start</a>
+				<a href = "admin.php">Pagina de start</a>
 			</li>
 			<li class = "nav-item2">
 				<img src = "users.png" class = "nav-item2img">
-				<a href = "#">Utilizatori</a>
+				<a href = "users.php">Utilizatori</a>
 			</li>
 			<li class = "nav-item3">
 				<img src = "detinuti.png" class = "nav-item3img">
-				<a href = "#">Detinuti</a>
+				<a href = "detinuti.php">Detinuti</a>
 			</li>
 			<li class = "nav-item4">
 				<img src = "statistici.png" class = "nav-item4img">
-				<a href = "#">Statistici</a>
+				<a href = "statisticsadmin.php">Statistici</a>
 			</li>
 			<li class = "logout">
-				<a href = "loginpage.html">Logout</a>
+				<a href = "logout.php">Logout</a>
 			</li>
 		</ul>
 	</div>
 	<div class = "header">
 	<div class = "header-logout">
 			<ul>
-				<li><a href="loginpage.html">Logout</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class = "continut">
-		<a href="detinuti.html" class="back">Inapoi</a>
+		<a href="detinuti.php" class="back">Inapoi</a>
 		<?php echo $message; ?>
 		<div class = "line1">
 			<h2 id = "lm">Vizitele detinutului:</h2>
