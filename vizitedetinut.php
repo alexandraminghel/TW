@@ -1,3 +1,7 @@
+<?php
+require_once('checksession.php');
+require_once('cautavizitedet.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,13 +46,28 @@
 	</div>
 	<div class = "continut">
 		<a href="detinuti.html" class="back">Inapoi</a>
+		<?php echo $message; ?>
 		<div class = "line1">
 			<h2 id = "lm">Vizitele detinutului:</h2>
-			<h2 id = "numeprenume"><?php require('functions.php'); echo getNameConvict();?></h2>
+			<h2 id = "numeprenume"><?php echo $detinut->nume;?></h2>
 		</div>
-		<?php
-			require('cautavizitedet.php');
-		?>
+		<div class = "pagination">
+        	<a href = <?php echo "\"$_SERVER[PHP_SELF]?id=$id_detinut&page=$last\"";?> >Inapoi</a>
+        	<a href = <?php echo "\"$_SERVER[PHP_SELF]?id=$id_detinut&page=$page\"";?> >Inainte</a>
+        </div>
+        </br>
+        <table class = "vizite">
+        	<th>ID</th><th>Data</th><th>Ora</th><th>Durata</th><th>Nume</th><th>Natura vizitei</th><th>Relatie</th><th id="discutie">Rezumatul discutiei</th><th id="obiecte">Obiecte aduse</th><th id="obiecte">Obiecte oferite</th>
+        	<?php
+        		for($line = 0; $line < $rownum; ++$line) {
+        			echo "<tr>";
+        			for($column = 0; $column < 10; ++$column) {
+        				echo "<td>".$rows[$line][$column]."</td>";
+        			}
+        			echo "</tr>";
+        		}
+        	?>
+        </table>
 	</div>
 </body>
 </html>

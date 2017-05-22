@@ -25,6 +25,7 @@ require_once('getusersvisit.php');
 		<main>
 			<div class = "wrapmain">
 				<h2>Arhiva vizite</h2>
+				<?php echo $message; ?>
 				<div class = "pagination">
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
