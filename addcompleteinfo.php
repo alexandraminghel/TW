@@ -7,9 +7,13 @@ if (! isset($_GET['id'])) {
 }
 
 else {
-	$id_prog = $_GET['id'];
+	$id_prog = (int)$_GET['id'];
 
-	if (! (isset($_POST["ora"]) && isset($_POST["durata"]) && isset($_POST["martor"]) && isset($_POST["obiected"]) && (!empty($_POST['info'])) && isset($_POST["sanatate"]))) {
+	if ($id_prog == 0) {
+		$message = "Programare inexistenta!";
+	}
+
+	else if (! (isset($_POST["ora"]) && isset($_POST["durata"]) && isset($_POST["martor"]) && isset($_POST["obiected"]) && (!empty($_POST['info'])) && isset($_POST["sanatate"]))) {
 		$message = "Atentie! Campuri obligatorii necompletate!</br>Redirectare spre pagina principala in 3 secunde.";
 	}
 
@@ -74,6 +78,6 @@ else {
 	}
 
 	echo $message;
-	header('Refresh: 3;URL=admin.html');
+	header('Refresh: 3;URL=admin.php');
 }
 ?>
