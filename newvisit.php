@@ -1,3 +1,6 @@
+<?php
+  require('checksession.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,7 @@
         <li><a href="newvisit.php">Acasa</a></li>
         <li><a href="users-contact.html">Contact</a></li>
         <li><a href="arhivausers.php">Arhiva</a></li>
-        <li><a href="loginpage.html">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </div>

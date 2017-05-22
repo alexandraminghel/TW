@@ -1,3 +1,6 @@
+<?php
+  require('checksession.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,14 +32,14 @@
 				<a href="statisticsadmin.html">Statistici</a>
 			</li>
 			<li class = "logout">
-				<a href = "login.html">Logout</a>
+				<a href = "logout.php">Logout</a>
 			</li>
 		</ul>
 	</div>
 	<div class = "header">
 	<div class = "header-logout">
 			<ul>
-				<li><a href="login.html">Logout</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>

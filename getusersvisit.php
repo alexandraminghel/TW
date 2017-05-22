@@ -1,5 +1,7 @@
 <?php  
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require_once ('connection.php');
 require_once ('userobject.php');
 require_once ('detinutobject.php');
