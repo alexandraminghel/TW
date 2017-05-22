@@ -4,6 +4,8 @@ require ('connection.php');
 $Email=$_POST["email"];
 $Password=$_POST["password"];
 $_SESSION['email']=$Email;
+$ceva='admin';
+$isPasswordCorrect = password_verify($Password, $ceva);
 	
 	if($Email=='admin' && $Password=='admin')
 		header('Location:admin.php');

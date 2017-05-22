@@ -1,6 +1,6 @@
 <?php
-require_once('checksession.php');
-require_once('infouser.php');
+require('checksession.php');
+require_once ('infouser.php');
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require ('connection.php');
 $query = "SELECT count(*) FROM detinuti";
 $result = mysqli_query($conn, $query);
@@ -24,7 +26,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",peadeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",peadeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
@@ -41,18 +43,13 @@ if (! $result) {
 
 			if( $page == $pages ) {
         		$last = $page - 1;
-                echo "<div class = \"pagination\">";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a>";
-                echo "</div>";
+                
      		}
 
      		else {
         		$last = $page - 1;
         		$page = $page + 1;
-        		echo "<div class = \"pagination\">";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a> | ";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
-        		echo "</div>";
+        		
         	}
     	}
     	else 
@@ -61,29 +58,35 @@ if (! $result) {
     		if ($pages > $page) {
     			$page = $page + 1;
     		}
+            $last = 1;
 
-
-            echo "<div class = \"pagination\">";
-        	echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
-            echo "</div>";
     	}
 
     	
-	   echo "<table class = \"info\">";
-        echo "<tr class=\"primul\"><td>Nume</td><td>Prenume</td><td>Data nastere</td><td>Data incarcerare</td><td>Pedeapsa</td><td>Crima</td></tr>";
 
        
 
-
+        $rows = array(array());
+        $rownum = 0;
         while ($row = $result->fetch_assoc())
         {
-        //$id_viz=$row['ID_VIZ'];
-		echo "<tr><td>".$row['NUME']."</td><td>".$row['PRENUME']."</td><td>".$row['DAT_NAS']."</td><td>".$row['DATA_INCA']."</td><td>".$row['PEDEAPSA']."</td><td>".$row['CRIMA']."</td></tr>";
+             $id_det=$row['ID_DET'];
+             $rows[$rownum][0] = $row['NUME'];
+             $rows[$rownum][1] = $row['PRENUME'];
+             $rows[$rownum][2] = $row['DAT_NAS'];
+             $rows[$rownum][3] = $row['DATA_INCA'];
+             $rows[$rownum][4] = $row['PEDEAPSA'];
+             $rows[$rownum][5] = $row['CRIMA'];
+             $rownum++;
 
+
+       
         }
+        $line = 0;
+        $column = 0;
 
 	}
-	echo "</table>";
+	
 
 }
 ?>

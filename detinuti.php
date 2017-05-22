@@ -1,3 +1,7 @@
+<?php  
+require_once('checksession.php');
+require('getdet.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +37,7 @@
 	<div class="header">
 	<div class = "header-logout">
 			<ul>
-				<li><a href="createaccount.html">Logout</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
@@ -45,9 +49,24 @@
 				</form>
 			</div>
 	<div class="afisare">
-					<?php 
-	require('getdet.php');
-	?>
+				<div class = "pagination">
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
+                </div>
+                </br>
+                <table class = "info">"
+                <tr class="primul"><td>Nume</td><td>Prenume</td><td>Data nastere</td><td>Data incarcerare</td><td>Pedeapsa</td><td>Crima</td></tr>
+                <?php
+        				for($line = 0; $line < $rownum; ++$line) {
+        					echo "<tr>";
+        					for($column = 0; $column < 6; ++$column) {
+        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        					}
+        					echo "</tr>";
+        				}
+        			?>
+
+                </table>
 	</div>	
 </body>
 </html>

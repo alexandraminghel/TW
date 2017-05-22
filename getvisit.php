@@ -1,13 +1,17 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();}
 require ('connection.php');
-$query = "SELECT count(*) FROM programari";
+$query = "SELECT count(*) FROM vizite";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_progs = $row[0];
 if ($nr_progs == 0) {
  	$message = "Nu aveti inca nici o programare de validat.";
-    echo $message;
+    $line=0;
+    $last=0;
+    $page=0;
+    
 }
 else
  {
@@ -41,18 +45,12 @@ if (! $result) {
 
 			if( $page == $pages ) {
         		$last = $page - 1;
-                echo "<div class = \"pagination\">";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a>";
-                echo "</div>";
      		}
 
      		else {
         		$last = $page - 1;
         		$page = $page + 1;
-        		echo "<div class = \"pagination\">";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$last\">Inapoi</a> | ";
-        		echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
-        		echo "</div>";
+        		
         	}
     	}
     	else 
@@ -63,27 +61,24 @@ if (! $result) {
     		}
 
 
-            echo "<div class = \"pagination\">";
-        	echo "<a href = \"$_SERVER[PHP_SELF]?page=$page\">Inainte</a>";
-            echo "</div>";
+            $last=1;
     	}
 
-    	echo "<table class = \"info\">";
-		echo "</br>";
-        echo "<tr class=\"primul\"><td>Nume vizitator</td><td>Detinut</td>";
-
-       
-
+        $rows = array(array());
+        $rownum = 0;
 
         while ($row = $result->fetch_assoc())
         {
         $id_viz=$row['ID_VIZ'];
-		echo "<tr><td><a href=\"addvisit.php?id=$id_viz\">".$row['NUME_VIZ']." ".$row['PRENUME_VIZ']."</td><td>".$row['NUME_DET']." ".$row['PRENUME_DET']."</td>";
+            $rows[$rownum][0] = $row['NUME_VIZ']." ".$row['PRENUME_VIZ'];
+            $rows[$rownum][1] = $row['NUME_DET']." ".$row['PRENUME_DET'];
+            $rownum++;
 
         }
-
+         $line = 0;
+         $column = 0;
 	}
-	echo "</table>";
+	
 
 }
 ?>

@@ -1,3 +1,7 @@
+<?php  
+require_once('checksession.php');
+require('getvisit.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +37,7 @@
 	<div class="header">
 	<div class = "header-logout">
 			<ul>
-				<li><a href="createaccount.html">Logout</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
@@ -43,9 +47,29 @@
 	</h1>
 	</div>
 	<div class="afisaremesaj">
-	<?php 
-	require('getvisit.php');
-	?>
+		<div class = "pagination">
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
+        </div>
+         <table class = "info">
+        	</br>
+        	<?php
+        	if($line==0)  echo $message;
+        	else{
+        	echo "<tr class=\"primul\"><td>Nume vizitator</td><td>Detinut</td>";
+        	
+        	
+        				for($line = 0; $line < $rownum; ++$line) {
+        					echo "<tr>";
+        					for($column = 0; $column < 2; ++$column) {
+        						echo "<td><a href=\"addvisit.php?id=$id_viz\">".$rows[$line][$column]."</td>";
+        					}
+        					echo "</tr>";
+        				}
+        			}
+        			?>
+        		</table>
+
 	</div>
 	
 </body>

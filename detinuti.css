@@ -9,6 +9,23 @@
 	background-color: #34495e;
 }
 
+.afisare a
+{
+    text-decoration: none;
+    color: black;
+    left: 70%;
+}
+
+.pagination
+{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding-left: 40%;
+    padding-top: 1%;
+    justify-content: space-around;
+}
+
 .imagine
 {
 	width: 30%;
