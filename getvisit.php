@@ -24,7 +24,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT u.nume as \"NUME_VIZ\",u.prenume as \"PRENUME_VIZ\", d.nume as \"NUME_DET\",d.prenume as \"PRENUME_DET\",u.id as \"ID_VIZ\" from programari p join users u on p.ID_VIZITATOR=u.id join detinuti d on d.id=p.ID_DETINUT  LIMIT $limit OFFSET $offset";
+$query="SELECT u.nume as \"NUME_VIZ\",u.prenume as \"PRENUME_VIZ\", d.nume as \"NUME_DET\",d.prenume as \"PRENUME_DET\",p.id as \"ID_VIZ\" from programari p join users u on p.ID_VIZITATOR=u.id join detinuti d on d.id=p.ID_DETINUT  LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
