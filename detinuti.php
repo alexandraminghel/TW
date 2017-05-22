@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>
+	<title>Detinuti</title>
 	<meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="admin.css">
+	<link rel="stylesheet" type="text/css" href="detinuti.css">
 </head>
 <body>
 	<div class="sidebar">
@@ -37,16 +37,17 @@
 			</ul>
 		</div>
 	</div>
-	<div class="cerere">
-	<h1>
-		Cerere Programari
-	</h1>
-	</div>
-	<div class="afisaremesaj">
-	<?php 
-	require('getvisit.php');
+	<div class = "statisticsid">
+				<form id = "IDsearch" method="post" action="detnume.php">
+					<label class = "textid" for = "id"> Introduceti numele detinului cautat</label>
+					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
+					<button type = "submit">Cauta</button>
+				</form>
+			</div>
+	<div class="afisare">
+					<?php 
+	require('getdet.php');
 	?>
-	</div>
-	
+	</div>	
 </body>
 </html>
