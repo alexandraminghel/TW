@@ -1,5 +1,6 @@
 <?php
-  require('checksession.php');
+require('checksession.php');
+require_once ('infouser.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,9 +62,24 @@
           </form>
         </div>
     </main>
-    <?php
-      require('infouser.php');
-    ?>
+    <div class = "nav1">
+      <div class = "userimg">
+        <img src=<?php echo "\"".$user->poza."\"";?> class="imagine">
+      </div>
+      <a href = "newvisit.php" class = "linknume"><div id = "nume"><?php echo $user->nume; ?></div></a>
+      <div class = "infotable">
+        <table class = "info">
+          <tr>
+            <td>Numar vizite programate</td>
+            <td id = "datalog"><?php echo $nr_programari; ?></td>
+          </tr>
+          <tr id = "ultimul">
+            <td>Ultima vizita </td>
+            <td id = "dataviz"><?php echo $ultima_viz; ?></td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>  
 </body>
 </html>
