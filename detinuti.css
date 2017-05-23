@@ -22,7 +22,7 @@
     flex-direction: row;
     width: 30%;
     padding-left: 40%;
-    padding-top: 1%;
+    padding-top: 4%;
     justify-content: space-around;
 }
 
@@ -163,6 +163,18 @@ ul
 
 }
 
+.buton1 
+{
+    margin-right: 50%;
+
+}
+
+.buton1 a
+{
+    text-decoration: none;
+    color:black;
+}
+
 .IDsearch
 {
 	display: flex;
@@ -177,14 +189,17 @@ ul
 	
 }
 
-
+.mesaj
+{
+    padding-left: 45%;
+}
 
 
 
 table 
 {
 	margin-left: 15%;
-	margin-top: 4%;
+	margin-top: 1%;
 	font-family: "Lato","sans-serif";	
 }		
 

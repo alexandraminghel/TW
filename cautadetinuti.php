@@ -1,13 +1,14 @@
 <?php  
 require_once('checksession.php');
-require('getvisit.php');
+require('getdet.php');
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>
+	<title>Detinuti</title>
 	<meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="admin.css">
+	<link rel="stylesheet" type="text/css" href="detinuti.css">
 </head>
 <body>
 	<div class="sidebar">
@@ -41,35 +42,37 @@ require('getvisit.php');
 			</ul>
 		</div>
 	</div>
-	<div class="cerere">
-	<h1>
-		Cerere Programari
-	</h1>
-	</div>
-	<div class="afisaremesaj">
-		<div class = "pagination">
+	<div class = "statisticsid">
+				<form id = "IDsearch" method="post" action="detnume.php">
+					<label class = "textid" for = "id"> Introduceti numele detinului cautat</label>
+					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
+					<button type = "submit">Cauta</button>
+				</form>
+			</div>
+	<div class="afisare">
+				<div class = "pagination">
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
-        </div>
-         <table class = "info">
-        	</br>
-        	<?php
-        	echo "<div class=\"mesaj\">".$message."</div>";
-        	echo "<tr class=\"primul\"><td>".$NumeVizitator."</td><td>".$Detinut."</td>";
+                </div>
+                </br>
+                <table class = "info">
+                </br>
+                <?php
         	
-        	
+        		echo "<div class=\"mesaj\">".$message."</div>";
+                echo "<tr class=\"primul\"><td>Nume</td><td>Prenume</td><td>Data nastere</td><td>Data incarcerare</td><td>Pedeapsa</td><td>Crima</td></tr>";
+                
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
-        					for($column = 0; $column < 2; ++$column) {
-        						echo "<td><a href=\"addvisit.php?id=$id_viz\">".$rows[$line][$column]."</td>";
+        					for($column = 0; $column < 6; ++$column) {
+        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
         					}
         					echo "</tr>";
         				}
         			
         			?>
-        		</table>
 
-	</div>
-	
+                </table>
+	</div>	
 </body>
 </html>

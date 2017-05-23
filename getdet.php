@@ -7,9 +7,20 @@ $query = "SELECT count(*) FROM detinuti";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_det = $row[0];
+$message="";
+$NumeTabel=" ";
+$PrenumeTabel=" ";
+$DataNastereTabel=" ";
+$DataIncarcerareTabel=" ";
+$PedeapsaTabel=" ";
+$CrimaTabel=" ";
 if ($nr_det == 0) {
  	$message = "Nu exista detinuti in baza de date";
-    echo $message;
+     $line=0;
+     $rownum=0;
+     $last=0;
+     $page=0;
+     
 }
 else
  {
@@ -63,7 +74,12 @@ if (! $result) {
     	}
 
     	
-
+        $NumeTabel="Nume";
+        $PrenumeTabel="Prenume";
+        $DataNastereTabel="Data nastere";
+        $DataIncarcerareTabel="Data incarcerare";
+        $PedeapsaTabel="Pedeapsa";
+        $CrimaTabel="Crima";
        
 
         $rows = array(array());

@@ -1,6 +1,7 @@
 <?php  
 require_once('checksession.php');
 require('getdet.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,21 +43,25 @@ require('getdet.php');
 		</div>
 	</div>
 	<div class = "statisticsid">
-				<form id = "IDsearch" method="post" action="detnume.php">
-					<label class = "textid" for = "id"> Introduceti numele detinului cautat</label>
-					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
-					<button type = "submit">Cauta</button>
-				</form>
-			</div>
+				<button class="buton1"><a href="cautadetinuti.php">Cauta un detinut</a></button>
+
+				<button class="buton2">Adauga un detinut</button>
+	
+			
+			</div>	
 	<div class="afisare">
 				<div class = "pagination">
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
                 </div>
                 </br>
-                <table class = "info">"
-                <tr class="primul"><td>Nume</td><td>Prenume</td><td>Data nastere</td><td>Data incarcerare</td><td>Pedeapsa</td><td>Crima</td></tr>
+                <table class = "info">
+                </br>
                 <?php
+        	
+        		echo "<div class=\"mesaj\">".$message."</div>";
+                echo "<tr class=\"primul\"><td>".$NumeTabel."</td><td>".$PrenumeTabel."</td><td>".$DataNastereTabel."</td><td>".$DataIncarcerareTabel."</td><td>".$PedeapsaTabel."</td><td>".$CrimaTabel."</td></tr>";
+                
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
         					for($column = 0; $column < 6; ++$column) {
@@ -64,6 +69,7 @@ require('getdet.php');
         					}
         					echo "</tr>";
         				}
+        			
         			?>
 
                 </table>

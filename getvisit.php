@@ -2,15 +2,19 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();}
 require ('connection.php');
-$query = "SELECT count(*) FROM vizite";
+$query = "SELECT count(*) FROM programari";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_progs = $row[0];
+$message="";
+$NumeVizitator="";
+$Detinut="";
 if ($nr_progs == 0) {
  	$message = "Nu aveti inca nici o programare de validat.";
     $line=0;
     $last=0;
     $page=0;
+    $rownum=0;
     
 }
 else
@@ -64,6 +68,8 @@ if (! $result) {
             $last=1;
     	}
 
+        $NumeVizitator="Nume vizitator";
+        $Detinut="Detinut";
         $rows = array(array());
         $rownum = 0;
 
