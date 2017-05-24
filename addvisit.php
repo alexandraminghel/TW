@@ -38,13 +38,13 @@
 		</ul>
 	</div>
 	<div class = "header">
-	<div class = "header-logout">
+		<div class = "header-logout">
 			<ul>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class = "continut">
+	<div class = "continut" style = "bottom: 0;">
 		<h4><?php echo $message; ?></h4>
 		<form action=<?php echo "\"addcompleteinfo.php?id=".$prog_id."\""; ?> method="POST">
 			<div id="informatiiuser">
