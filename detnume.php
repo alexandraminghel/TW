@@ -1,6 +1,6 @@
 <?php  
 require_once('checksession.php');
-
+require('getnumedet.php');
 
 ?>
 <!DOCTYPE html>
@@ -50,9 +50,31 @@ require_once('checksession.php');
 				</form>
 			</div>
 	<div class="afisare">
-				
+				<div class = "pagination">
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
+                </div>
                 </br>
+                <table class = "info">
+                </br>
+                 <?php
+        	
+        		echo "<div class=\"mesaj\">".$message."</div>";
+                echo "<tr class=\"primul\"><td>".$NumeTabel."</td><td>".$PrenumeTabel."</td><td>".$DataNastereTabel."</td><td>".$DataIncarcerareTabel."</td><td>".$PedeapsaTabel."</td><td>".$CrimaTabel."</td></tr>";
                 
+        				for($line = 0; $line < $rownum; ++$line) {
+        					echo "<tr>";
+        					for($column = 0; $column < 6; ++$column) {
+        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        					}
+        					echo "</tr>";
+        				}
+        			
+        			?>
+
+
+        		</table>
+              
 	</div>	
 </body>
 </html>
