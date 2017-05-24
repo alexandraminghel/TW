@@ -46,7 +46,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",peadeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti where  NUME='$Nume' and PRENUME='$Prenume' LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",pedeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti where  NUME='$Nume' and PRENUME='$Prenume' LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 

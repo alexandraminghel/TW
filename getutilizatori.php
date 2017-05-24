@@ -3,17 +3,15 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 require ('connection.php');
-$query = "SELECT count(*) FROM detinuti";
+$query = "SELECT count(*) FROM users";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_det = $row[0];
 $message="";
-$NumeTabel=" ";
-$PrenumeTabel=" ";
-$DataNastereTabel=" ";
-$DataIncarcerareTabel=" ";
-$PedeapsaTabel=" ";
-$CrimaTabel=" ";
+$NumeTabel="Nume";
+$PrenumeTabel="Prenume";
+$EmailTabel="Email";
+$TelefonTabel="Numar telefon";
 if ($nr_det == 0) {
  	$message = "Nu exista detinuti in baza de date";
      $line=0;
@@ -37,7 +35,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",pedeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_USER\", nume as \"NUME\",prenume as \"PRENUME\", email as \"EMAIL\",telefon as \"TELEFON\" from users LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
@@ -76,23 +74,20 @@ if (! $result) {
     	
         $NumeTabel="Nume";
         $PrenumeTabel="Prenume";
-        $DataNastereTabel="Data nastere";
-        $DataIncarcerareTabel="Data incarcerare";
-        $PedeapsaTabel="Pedeapsa";
-        $CrimaTabel="Crima";
+        $EmailTabel="Email";
+        $TelefonTabel="Numar telefon";
+       
        
 
         $rows = array(array());
         $rownum = 0;
         while ($row = $result->fetch_assoc())
         {
-             $id_det=$row['ID_DET'];
+             $id_det=$row['ID_USER'];
              $rows[$rownum][0] = $row['NUME'];
              $rows[$rownum][1] = $row['PRENUME'];
-             $rows[$rownum][2] = $row['DAT_NAS'];
-             $rows[$rownum][3] = $row['DATA_INCA'];
-             $rows[$rownum][4] = $row['PEDEAPSA'];
-             $rows[$rownum][5] = $row['CRIMA'];
+             $rows[$rownum][2] = $row['EMAIL'];
+             $rows[$rownum][3] = $row['TELEFON'];
              $rownum++;
 
 

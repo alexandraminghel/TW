@@ -1,6 +1,6 @@
 <?php  
 require_once('checksession.php');
-
+require('getnumeuser.php');
 
 ?>
 <!DOCTYPE html>
@@ -44,15 +44,36 @@ require_once('checksession.php');
 	</div>
 	<div class = "statisticsid">
 				<form id = "IDsearch" method="post" action="detnume.php">
-					<label class = "textid" for = "id"> Introduceti numele detinului cautat</label>
+					<label class = "textid" for = "id"> Introduceti numele utilizatorului cautat</label>
 					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
 					<button type = "submit">Cauta</button>
 				</form>
 			</div>
 	<div class="afisare">
-				
+				<div class = "pagination">
+        		
+                </div>
                 </br>
+                <table class = "info">
+                </br>
+                 <?php
+        	
+        		echo "<div class=\"mesaj\">".$message."</div>";
+                echo "<tr class=\"primul\"><td>".$NumeTabel."</td><td>".$PrenumeTabel."</td><td>".$EmailTabel."</td><td>".$TelefonTabel."</td></tr>";
                 
+        				for($line = 0; $line < $rownum; ++$line) {
+        					echo "<tr>";
+        					for($column = 0; $column < 4; ++$column) {
+        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        					}
+        					echo "</tr>";
+        				}
+        			
+        			?>
+
+
+        		</table>
+              
 	</div>	
 </body>
 </html>

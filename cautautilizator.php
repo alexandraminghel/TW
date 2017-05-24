@@ -23,7 +23,7 @@ require_once('checksession.php');
 			</li>
 			<li class="nav-item2">
 				<img src="users.png" class="nav-item2img">
-				<a href="admin-utilizatori.php">Utilizatori</a>
+				<a href="admin-utilizatori.html">Utilizatori</a>
 			</li>
 			<li class="nav-item3">
 				<img src="detinuti.png" class="nav-item3img">
@@ -43,8 +43,8 @@ require_once('checksession.php');
 		</div>
 	</div>
 	<div class = "statisticsid">
-				<form id = "IDsearch" method="post" action="detnume.php">
-					<label class = "textid" for = "id"> Introduceti numele detinului cautat</label>
+				<form id = "IDsearch" method="post" action="usernume.php">
+					<label class = "textid" for = "id"> Introduceti numele utilizatorului cautat</label>
 					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
 					<button type = "submit">Cauta</button>
 				</form>
