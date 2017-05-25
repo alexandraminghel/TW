@@ -8,7 +8,10 @@ $ceva='admin';
 $isPasswordCorrect = password_verify($Password, $ceva);
 	
 	if($Email=='admin' && $Password=='admin')
-		header('Location:admin.php');
+		{
+			$_SESSION['type']='admin';
+			header('Location:admin.php');
+		}
 	else
 	{
 	$sql1="Select * from users where '$Email'=EMAIL";
@@ -26,7 +29,10 @@ $isPasswordCorrect = password_verify($Password, $ceva);
 		header('Location:loginpage_error_email.html');
 	else
 	if ($isPasswordCorrect==1)
-	header('Location: newvisit.php');
+	{
+		$_SESSION['type']='user';
+		header('Location: newvisit.php');
+	}
 	else
 	header('Location: loginpage_error.html');
 	}
