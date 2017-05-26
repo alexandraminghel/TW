@@ -43,7 +43,7 @@ require('getnumeuser.php');
 		</div>
 	</div>
 	<div class = "statisticsid">
-				<form id = "IDsearch" method="post" action="detnume.php">
+				<form id = "IDsearch" method="post" action="usernume.php">
 					<label class = "textid" for = "id"> Introduceti numele utilizatorului cautat</label>
 					<input type = "text" name = "numeprenume" placeholder="Nume Prenume">
 					<button type = "submit">Cauta</button>

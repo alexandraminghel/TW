@@ -3,16 +3,16 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 require ('connection.php');
-$query = "SELECT count(*) FROM users";
+$query = "SELECT count(*) FROM users where NUME not like 'admin'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
-$nr_det = $row[0];
+$nr_users = $row[0];
 $message="";
 $NumeTabel="Nume";
 $PrenumeTabel="Prenume";
 $EmailTabel="Email";
 $TelefonTabel="Numar telefon";
-if ($nr_det == 0) {
+if ($nr_users == 0) {
  	$message = "Nu exista detinuti in baza de date";
      $line=0;
      $rownum=0;
@@ -23,7 +23,7 @@ if ($nr_det == 0) {
 else
  {
 	$limit = 2;
-	$pages = ceil($nr_det / $limit);
+	$pages = ceil($nr_users / $limit);
 
 	if ( isset($_GET["page"]) ) {
 		$page = $_GET["page"];
@@ -35,7 +35,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT id as \"ID_USER\", nume as \"NUME\",prenume as \"PRENUME\", email as \"EMAIL\",telefon as \"TELEFON\" from users LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_USER\", nume as \"NUME\",prenume as \"PRENUME\", email as \"EMAIL\",telefon as \"TELEFON\" from users where NUME not like 'admin'LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 

@@ -6,8 +6,21 @@ $Password=$_POST["password"];
 $_SESSION['email']=$Email;
 $ceva='admin';
 $isPasswordCorrect = password_verify($Password, $ceva);
-	
-	if($Email=='admin' && $Password=='admin')
+
+
+$sql1="Select * from users where '$Email'=EMAIL";
+$sql2="Select parola from users where '$Email'=EMAIL";
+$result1=mysqli_query($conn,$sql1) or die(mysqli_error($conn));
+$result2=mysqli_query($conn,$sql2) or die(mysqli_error($conn));
+$count1 = mysqli_num_rows($result1);
+$count2 = mysqli_num_rows($result2);
+$row=$result1->fetch_assoc();
+$ceva=$row["PAROLA"];
+$altceva=$row["EMAIL"];
+$isPasswordCorrect = password_verify($Password, $ceva);
+
+
+	if($altceva=='admin' && $isPasswordCorrect=='admin')
 		{
 			$_SESSION['type']='admin';
 			header('Location:admin.php');

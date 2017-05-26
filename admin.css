@@ -157,7 +157,7 @@ ul
 	display: flex;
 	width: 40%;
 	flex-direction: row;
-	padding-left: 43%;
+	padding-left: 45%;
 	padding-top: 4%;
 	align-items: center;
 }
@@ -165,9 +165,9 @@ ul
 .afisaremesaj
 {
 	
-	width: 70%;
+	width: 90%;
 	flex-direction: row;
-	margin-left: 16%;
+	margin-left: 5%;
 	margin-top: 1%;
 	align-items: center;
 }

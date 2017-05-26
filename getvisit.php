@@ -38,10 +38,8 @@ $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
 
 if (! $result) {
-    	$message = "Nu aveti inca nici o vizita realizata";
-    	echo "<div class=\"nici\">";
-    	echo $message;
-    	echo "<div/>";
+    	$message = "Nu exista nici o programare momentan";
+    	
 	}
 	else
 	{
