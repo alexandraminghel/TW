@@ -1,7 +1,6 @@
 <?php
-require_once('checksession.php');
-require_once('infouser.php');
-require_once('cvisit.php');
+require('checksession.php');
+require_once ('infouser.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,29 +24,24 @@ require_once('cvisit.php');
   <div class = "wrap">
     <main>
       <div class = "wrapmain">
-        <p><?php echo $message; ?></p>
         <h2>Programare vizita</h2>
-          <form action="newvisit.php" method="post">
+          <form action="addnewvisit.php" method="post">
             <ul class="flex">
                 <li>
-                    <label for="lastname">ID detinut</label>
-                    <input type="text" id="id" name="id" placeholder="ID-ul detinutului">
-                </li>
-                <li>
                     <label for="lastname">Nume detinut</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Numele de familie" required="">
+                    <input type="text" id="lastname" name="lastname" placeholder="Numele de familie">
                 </li>
                 <li>
                   <label for="firstname">Prenume detinut</label>
-                  <input type="text" id="firstname" name="firstname" placeholder="Prenumele" required="">
+                  <input type="text" id="firstname" name="firstname" placeholder="Prenumele">
                 </li>
                 <li>
                   <label for="date">Data vizitei</label>
-                  <input type="text" name="date" name="date" placeholder="Data (aaa-ll-zz)" required="">
+                  <input type="text" name="date" name="date" placeholder="Data (aaa-ll-zz)">
                 </li>
                 <li>
                   <label for="reasonforvisit">Natura vizitei</label>
-                  <textarea rows="3" id="reasonforvisit" name="reasonforvisit" placeholder="Natura vizitei" required=""></textarea>
+                <textarea rows="3" id="reasonforvisit" name="reasonforvisit" placeholder="Natura vizitei"></textarea>
               </li>
                 <li>
                   <label for="talksummary">Rezumatul discutiei</label>
@@ -59,10 +53,10 @@ require_once('cvisit.php');
               </li>
               <li>
                   <label for="related">Relatia cu detinutul</label>
-                <input id="related" name="related" placeholder="Relatia cu detinutul" required=""></input>
+                <input id="related" name="related" placeholder="Relatia cu detinutul"></input>
               </li>
                 <li>
-                  <button type="submit" name = "submitbutton">Adauga programare</button>
+                  <button type="submit">Adauga programare</button>
                 </li>
             </ul>
           </form>

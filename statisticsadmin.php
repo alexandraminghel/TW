@@ -23,11 +23,11 @@ require_once('getstatisticstoday.php');
 			</li>
 			<li class = "nav-item2">
 				<img src = "users.png" class = "nav-item2img">
-				<a href="admin-utilizatori.html">Utilizatori</a>
+				<a href="admin-utilizatori.php">Utilizatori</a>
 			</li>
 			<li class = "nav-item3">
 				<img src = "detinuti.png" class = "nav-item3img">
-				<a href="detinuti.html">Detinuti</a>
+				<a href="detinuti.php">Detinuti</a>
 			</li>
 			<li class = "nav-item4">
 				<img src = "statistici.png" class = "nav-item4img">

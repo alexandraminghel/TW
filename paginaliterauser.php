@@ -49,8 +49,8 @@ require('cautautilizatorilitera.php');
 			</div>	
 	<div class="afisare">
 				<div class = "pagination">
-        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
-        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last&litera=A\"; >".$Inapoi."</a>"?>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page&litera=A\"; >".$Inainte."</a>"?>
                 </div>
                 <div class="categorii">
 		        

@@ -15,7 +15,7 @@ $PrenumeTabel="";
 $EmailTabel="";
 $TelefonTabel="";
 if ($nr_det == 0) {
- 	$message = "Nu exista detinuti in baza de date";
+ 	$message = "Nu exista utilizatori cu prima litera $litera in baza de date ";
      $line=0;
      $rownum=0;
      $last=0;
@@ -24,6 +24,8 @@ if ($nr_det == 0) {
 	 $PrenumeTabel="";
 	 $EmailTabel="";
 	 $TelefonTabel="";
+     $Inapoi="";
+     $Inainte="";
      
 }
 else
@@ -48,8 +50,10 @@ $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
 if (! $result) {
     	$message = "Nu aveti inca nici o vizita realizata aaaaaaaaaaaaaaaaa";
-    	//echo "<div class=\"nici\">";
-    	echo $message;
+    	echo "<div class=\"nici\">";
+        
+     
+    	//echo $message;
     	//echo "<div/>";
 	}
 	else
@@ -82,7 +86,8 @@ if (! $result) {
         $PrenumeTabel="Prenume";
         $EmailTabel="Email";
         $TelefonTabel="Numar telefon";
-       
+        $Inapoi="Inapoi";
+        $Inainte="Inainte";
        
 
         $rows = array(array());
