@@ -33,17 +33,24 @@ class Detinut {
 	public function createByName($lastname, $firstname, $conn) {
 		$this->nume = $lastname." ".$firstname;
 
-		$query = $conn->prepare('SELECT id, DATANASTERE, DATAINCARCERARE, PEADEAPSA FROM detinuti where nume like ? and prenume like ?');
+		$query = $conn->prepare('SELECT id, DATANASTERE, DATAINCARCERARE, PEDEAPSA FROM detinuti where nume like ? and prenume like ?');
 		$query->bind_param('ss', $lastname, $firstname);
 		$query->execute();
 		$result = $query->get_result();
  
- 		if( mysqli_num_rows($result) > 0) {
+		if ( mysqli_num_rows($result) > 1) {
+			$this->id = -1;
+ 	 		$this->data_nasterii = "";
+ 			$this->data_incarcerarii = "";
+ 			$this->timp_pedeapsa = "";
+		}
+
+ 		else if( mysqli_num_rows($result) == 1) {
  			$row = $result->fetch_assoc();
  			$this->id = $row['id'];
  			$this->data_nasterii = $row['DATANASTERE'];
  			$this->data_incarcerarii = $row['DATAINCARCERARE'];
- 			$this->timp_pedeapsa = $row['PEADEAPSA'];
+ 			$this->timp_pedeapsa = $row['PEDEAPSA'];
  		}
 
  		else {
