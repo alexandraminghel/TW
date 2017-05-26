@@ -12,13 +12,13 @@ $Prenume=trim($Prenume);
 $query = "SELECT count(*) FROM users where NUME='$Nume' and PRENUME='$Prenume'";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
-$nr_user = $row[0];
+$nr_det = $row[0];
 $message="";
 
 
 
-if ($nr_user == 0) {
-    $message = "Nu exista utilizatorul in baza de date";
+if ($nr_det == 0) {
+    $message = "Nu exista detinutul in baza de date";
      $line=0;
      $rownum=0;
      $last=0;
@@ -33,7 +33,7 @@ if ($nr_user == 0) {
 else
  {
     $limit = 2;
-    $pages = ceil($nr_user / $limit);
+    $pages = ceil($nr_det / $limit);
 
     if ( isset($_GET["page"]) ) {
         $page = $_GET["page"];

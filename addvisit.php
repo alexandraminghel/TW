@@ -18,15 +18,15 @@
 		<ul class = "nav">
 			<li class = "nav-item1">
 				<img src = "acasa.png" class = "nav-item1img">
-				<a href="admin.php">Cerere Programari</a>
+				<a href="admin.html">Cerere Programari</a>
 			</li>
 			<li class = "nav-item2">
 				<img src = "users.png" class = "nav-item2img">
-				<a href="admin-utilizatori.php">Utilizatori</a>
+				<a href="admin-utilizatori.html">Utilizatori</a>
 			</li>
 			<li class = "nav-item3">
 				<img src = "detinuti.png" class = "nav-item3img">
-				<a href="detinuti.php">Detinuti</a>
+				<a href="detinuti.html">Detinuti</a>
 			</li>
 			<li class = "nav-item4">
 				<img src = "statistici.png" class = "nav-item4img">
@@ -38,13 +38,13 @@
 		</ul>
 	</div>
 	<div class = "header">
-	<div class = "header-logout">
+		<div class = "header-logout">
 			<ul>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class = "continut">
+	<div class = "continut" style = "bottom: 0;">
 		<h4><?php echo $message; ?></h4>
 		<form action=<?php echo "\"addcompleteinfo.php?id=".$prog_id."\""; ?> method="POST">
 			<div id="informatiiuser">
