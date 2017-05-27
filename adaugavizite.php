@@ -81,8 +81,7 @@ for($index = 1; $index <= 3000; $index++) {
 	$ora_end = strtotime('17:00');
 	$ora_rand = rand($ora_start, $ora_end);	
 
-	$ora = DateTime::createFromFormat('H:i', $ora_rand);
-	$ora_fin = date('H:i:s', $ora);
+	$ora_fin = date('H:i:s', $ora_rand);
 
 	$durata = rand(10, 40);
 
