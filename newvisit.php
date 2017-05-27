@@ -1,5 +1,6 @@
 <?php
 require_once('checksession.php');
+require_once('checkuser.php');
 require_once('infouser.php');
 require_once('cvisit.php');
 ?>

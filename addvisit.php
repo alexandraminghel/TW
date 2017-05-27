@@ -1,6 +1,7 @@
 <?php
-  require('checksession.php');
-  require('getproginfo.php');
+  require_once('checksession.php');
+  require_once('checkadmin.php');
+  require_once('getproginfo.php');
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,6 @@
 <?php
 require_once('checksession.php');
+require_once('checkadmin.php');
 ?>
 <!DOCTYPE html>
 <html>
