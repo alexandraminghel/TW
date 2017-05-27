@@ -1,6 +1,7 @@
 body
 {
 	display: flex;
+	overflow: hidden;
 }
 
 .sidebar
@@ -8,7 +9,7 @@ body
 	width: 15%;
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	height: 100vh;
 	left:0;
 	background-color: #34495e;
 }
@@ -145,6 +146,12 @@ ul
 	position: absolute;
 	top: 10%;
 	left: 15%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.continut h4 {
+	align-self: center;
 }
 
 form #informatiiuser
@@ -368,6 +375,10 @@ form div p:nth-child(2)
 }
 
 @media only screen and (max-width: 480px){
+	body{
+		overflow: auto;
+	}
+
 	.sidebar{
 		height: 30%;
 		position: absolute;

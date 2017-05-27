@@ -23,7 +23,7 @@ for($index = 0; $index < 300; ++$index) {
 
 	else {
 		$email = strtolower($nume_user).strtolower($prenume_user)."@gmail.com";
-		$poza = "poza/".$email.".jpg";
+		$poza = "poze/".$email.".jpg";
 		$telefon = "074";
 	
 		for($index2 = 1; $index2 <= 7; ++$index2) {
