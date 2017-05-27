@@ -70,10 +70,11 @@ if (! $result) {
         $Detinut="Detinut";
         $rows = array(array());
         $rownum = 0;
-
+        $contorid=0;
         while ($row = $result->fetch_assoc())
         {
-        $id_viz=$row['ID_VIZ'];
+            $id_viz[$contorid]=$row['ID_VIZ'];
+            $contorid++;
             $rows[$rownum][0] = $row['NUME_VIZ']." ".$row['PRENUME_VIZ'];
             $rows[$rownum][1] = $row['NUME_DET']." ".$row['PRENUME_DET'];
             $rownum++;

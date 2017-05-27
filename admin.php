@@ -61,7 +61,7 @@ require('getvisit.php');
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
         					for($column = 0; $column < 2; ++$column) {
-        						echo "<td><a href=\"addvisit.php?id=$id_viz\">".$rows[$line][$column]."</td>";
+        						echo "<td><a href=\"addvisit.php?id=$id_viz[$line]\">".$rows[$line][$column]."</td>";
         					}
         					echo "</tr>";
         				}
