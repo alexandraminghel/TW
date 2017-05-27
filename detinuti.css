@@ -175,6 +175,13 @@ ul
     color:black;
 }
 
+
+.buton2 a
+{
+    text-decoration: none;
+    color:black;
+}
+
 .IDsearch
 {
 	display: flex;
