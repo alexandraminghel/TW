@@ -10,4 +10,12 @@ $email = $_SESSION['email'];
 $user = new User($email, $conn);
 $nr_programari = getTotalProgs($user->id, $conn);
 $ultima_viz = getLastVisit($user->id, $conn);
+
+if (! (file_exists($user->poza))) {
+	$poza = "poze/default.jpg";
+}
+
+else {
+	$poza = $user->poza;
+}
 ?>

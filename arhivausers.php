@@ -29,10 +29,10 @@ require_once('getusersvisit.php');
 				<div class = "pagination">
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page\"";?> >Inainte</a>
-                </div>
-                </br>
-                <table class = "vizite">
-        			<th><td>ID</td><td>Data</td><td>Ora</td><td>Nume detinut</td><td>Prenume detinut</td><td>Natura vizitei</td><td>Relatia cu detinutul</td></th>
+        </div>
+        </br>
+        <table class = "vizite">
+          <th><td>ID</td><td>Data</td><td>Ora</td><td>Nume detinut</td><td>Prenume detinut</td><td>Natura vizitei</td><td>Relatia cu detinutul</td></th>
         			<?php
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
@@ -47,7 +47,7 @@ require_once('getusersvisit.php');
 		</main>
 		<div class = "nav1">
       		<div class = "userimg">
-        		<img src=<?php echo "\"".$user->poza."\"";?> class="imagine">
+        		<img src=<?php echo "\"".$poza."\"";?> class="imagine">
       		</div>
       		<a href = "newvisit.php" class = "linknume"><div id = "nume"><?php echo $user->nume; ?></div></a>
       		<div class = "infotable">

@@ -70,7 +70,7 @@ require_once('cvisit.php');
     </main>
     <div class = "nav1">
       <div class = "userimg">
-        <img src=<?php echo "\"".$user->poza."\"";?> class="imagine">
+        <img src=<?php echo "\"".$poza."\"";?> class="imagine">
       </div>
       <a href = "newvisit.php" class = "linknume"><div id = "nume"><?php echo $user->nume; ?></div></a>
       <div class = "infotable">
