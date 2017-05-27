@@ -9,7 +9,7 @@ $Nume=substr($NumePrenume,0, $last_space);
 $Prenume=trim($Prenume);
 
 
-$query = "SELECT count(*) FROM detinuti where NUME='$Nume' and PRENUME='$Prenume'";
+$query = "SELECT count(*) FROM detinuti where lower(NUME)=lower('$Nume') and lower(PRENUME)=lower('$Prenume')";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_det = $row[0];
@@ -46,7 +46,7 @@ else
     	$offset = 0;
 	}
 
-$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",pedeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti where  NUME='$Nume' and PRENUME='$Prenume' LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", datanastere as \"DAT_NAS\",dataincarcerare as \"DATA_INCA\",pedeapsa as \"PEDEAPSA\",crima as \"CRIMA\" from detinuti where  lower(NUME)=lower('$Nume') and lower(PRENUME)=lower('$Prenume') LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 

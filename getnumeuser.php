@@ -9,7 +9,7 @@ $Nume=substr($NumePrenume,0, $last_space);
 $Prenume=trim($Prenume);
 
 
-$query = "SELECT count(*) FROM users where NUME='$Nume' and PRENUME='$Prenume'";
+$query = "SELECT count(*) FROM users where lower(NUME)=lower('$Nume') and lower(PRENUME)=lower('$Prenume')";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_row($result);
 $nr_user = $row[0];
@@ -45,7 +45,7 @@ else
         $offset = 0;
     }
 
-$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", email as \"EMAIL\",telefon as \"TELEFON\" from users where  NUME='$Nume' and PRENUME='$Prenume' LIMIT $limit OFFSET $offset";
+$query="SELECT id as \"ID_DET\", nume as \"NUME\",prenume as \"PRENUME\", email as \"EMAIL\",telefon as \"TELEFON\" from users where  lower(NUME)=lower('$Nume') and lower(PRENUME)=lower('$Prenume') LIMIT $limit OFFSET $offset";
 mysqli_free_result($result);
 $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
@@ -84,8 +84,8 @@ if (! $result) {
         
         $NumeTabel="Nume";
         $PrenumeTabel="Prenume";
-        $EmailTabel="Data nastere";
-        $TelefonTabel="Data incarcerare";
+        $EmailTabel="Email";
+        $TelefonTabel="Numar Telefon";
        
        
 
