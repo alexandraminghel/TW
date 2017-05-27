@@ -9,8 +9,7 @@ require_once ('detinutobject.php');
 $email = $_SESSION['email'];
 $message = "";
 $user = new User($email, $conn);
-
-$query = $conn->prepare('SELECT count(*) as "nr" FROM programari where id_vizitator like ?');
+$query = $conn->prepare('SELECT count(*) as "nr" FROM vizite where id_vizitator like ?');
 $query->bind_param('i', $user->id);
 $query->execute();
 $result = $query->get_result();
@@ -22,8 +21,9 @@ if ($nr_progs == 0) {
     $column = 0;
     $rownum = 0;
     $rows = array(array());
+    $page = 1;
+    $last = 1;
  	$message = "Nu aveti inca nici o vizita realizata.";
-    echo $message;
 }
 else {
 	$limit = 2;
