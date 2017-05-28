@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <title>Deton</title>
+  <link rel="stylesheet" href="scholarly.css">
+<style type="text/css"></style></head>
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+  <header>
+    <p class="title">Deton</p>
+    <p class="subtitle">Detention Monitoring Tool</p>
+  </header>
+  <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+    <h1>Documentatie Deton</h1>
+    <section>
+      <ol>
+        <li property="schema:author" typeof="sa:ContributorRole">
+          <a property="schema:author" href="http://students.info.uaic.ro/~alexandra.minghel" typeof="schema:Person">
+            <span property="schema:givenName">Alexandra-Elena</span>
+            <span property="schema:familyName">Minghel, </span>
+          </a>
+
+          <a property="schema:author" href="http://students.info.uaic.ro/~anca.grigoriu" typeof="schema:Person">
+            <span property="schema:givenName">Anca</span>
+            <span property="schema:familyName">Grigoriu, </span>
+          </a>
+          <a property="schema:author" href="http://students.info.uaic.ro/~dan.bizu" typeof="schema:Person">
+            <span property="schema:givenName">Dan-Alexandru</span>
+            <span property="schema:familyName">Bîzu </span>
+          </a>
+        </li>
+      </ol>
+    </section>
+    <section typeof="sa:Abstract" id="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Proiectul are drept scop gestionarea vizitelor ce au loc în incinta unui penitenciar, oferind informații și statistici cât mai relevante persoanelor cu drept de vizualizare a datelor. De asemenea, aplicația oferă celor ce doresc sa viziteze un deținut posibilitatea de a realiza o programare, printr-o interfață user-friendly și ușor de folosit.
+      </p>
+    </section>
+    <section typeof="sa:MaterialsAndMethods" id="motivation">
+      <h2>Motivația</h2>
+      <p>
+        În viața de zi cu zi, pentru instituțiile ca o închisoare, arhivarea fizică a datelor despre deținuți și vizitele acestora poate fi extrem de dificilă. 
+      </p>
+      <p>
+        Prin intermediul aplicației, dorim să ușurăm acest proces, și să oferim administratorilo o metodă simplă de a analiza această activitare, și de a extrage informații cât mai relevante pentru îmbunătățirea procesului. De asemenea, oferim persoanelor ce doresc să viziteze un deținut un mod de a realiza o programare, și de a vedea informații despre vizitele și programările realizate.
+      </p>
+    </section>
+    <section typeof="sa:Results" id="definition">
+      <h2>Descrierea aplicației</h2>
+      <p>
+        Deton este o aplicație Web ce ajută la gestionarea vizitelor din cadrul unui penitenciar, precum și înregistrarea și analiza datelor rezultate în urma acestora. Aplicația stochează informații despre programări și vizite într-o bază de date SQL, astfel încât acestea vor putea fi colectate oricând întru-un mod simplu și rapid. Utilizatorii ce doresc să acceseze datele astfel înregistrate sunt nevoiți să se autentifice, asigurând astfel securitatea informațiilor. Dacă aceștia nu au cont, atunci vor fi nevoiți să își creeze unul.
+      </p>
+      <p>
+        Odată ce s-au autentificat, utilizatorii oarecare au posibilitatea de a realiza o nouă programare, completând câmpurile necesare, sau de a vedea arhiva programarilor deja înregistrate, precum și arhiva vizitelor realizate de utilizatorul respectiv până în momentul curent. 
+      </p>
+      <p>
+        Utilizatorii cu drept de administrator au opțiunea de a vedea toate programările înregistrate până în acest moment, precum și de a adăuga o nouă vizită în momentul realizării acesteia, adăugând la informațiile completate de vizitator noi date referitoare la modul în care a decurs vizita.
+      </p>
+      <p>
+        De asemenea, utilizatorii cu drepturi de administrare au posibilitatea de a genera într-un mod intuitiv statistici despre vizitele înregistrate, în funcție de: 
+        <ul>
+          <li>intervalul realizării acestora</li>
+          <li>deținutul vizitat</li>
+          <li>crima pentru care au fost condamnate persoanele încarcerate</li>
+        </ul>
+      </p>
+      <p>
+        Aceste statistici pot ajuta la evaluarea lunară sau la anumite intervale a activității penitenciarului, și pot reprezenta un pas de pornire în schimbarea modului de lucru pentru a duce la performanță îmbunătățită în cadrul instituției.
+      </p>
+    </section>
+    <section id="file-headers">
+
+        <h2>Tehnologii</h2>
+        <p>
+          Aplicația este realizată utilizând <code>HTML5</code> și <code>CSS3</code> pentru partea de front-end, iar partea de back-end este implementată în limbajul <code>PHP 7</code>.
+        </p>
+        <p>
+          Pe partea de server am utilizat <code>Apache</code>, iar pentru stocarea datelor am folosit <code>MySQL</code>.
+        </p>
+        <p>
+
+        </p><h3>Front-end</h3>
+        <p>
+          Interfața aplicației este reprezentată de un număr de pagini prin intermediul cărora utilizatorul interacționează cu partea de back-end. 
+        </p>
+
+        <h4>Pagina principală</h4>
+        <p>
+          În pagina principală, utilizatorului îi este oferită opțiunea de a se autentifica utilizând e-mailul și parola specifice, sau de a-și crea un cont. De asemenea, dacă dorește să afle informații prin care să contacteze penitenciarul, acesta poate accesa link-ul oferit.
+        </p>
+        <img src="./deton-imgs/PaginaPrincipala.PNG" alt="Pagina principala">
+
+        <h4>Contact</h4>
+        <p>
+          Utilizatorul poate prelua de aici informații legate de penitenciar, precum adresa, e-mailul, numărul de telefon sau de fax, și localizarea pe hartă.
+        </p>
+        <img src="./deton-imgs/Contact.PNG" alt="Contact">
+
+        <h4>Creare cont</h4>
+        <p>
+          Utilizatorul își poate crea un cont prin intermediul căruia să își programeze vizite și să poată vedea istoricul vizitelor și programărilor ulterior realizate. Acesta trebuie să completeze toate câmpurile, oferind astfel informații precum numele, prenumele, adresa de e-mail și numărul de telefon, precum și o poză. După completarea formularului de creare de cont, va fi redirecționat în mod automat spre pagina de autentificare, de unde își va putea accesa contul nou creat cu informațiile completate anterior.
+        </p>
+        <p>
+          În cazul în care utilizatorul dorește, se poate întoarce la pagina de autentificare prin intermediul link-ului oferit.
+        </p>
+        <img src="./deton-imgs/CreareCont.PNG" alt="Creare cont">
+
+        <h4>Pagina principală a utilizatorului oarecare</h4>
+        <p>
+          În pagina principală a utilizatorului cu drepturi obișnuite, acestuia îi este oferit un formular prin intermediul căruia poate programa o nouă vizită, completând informații precum numele și prenumele deținutului pe care dorește să îl viziteze, id-ul acestuia (în cazul în care îl cunoaște), data și natura vizitei, rezumatul discuției pe care dorește să o aibă cu deținutul, și relația cu acesta.
+        </p>
+        <img src="./deton-imgs/PaginaPrincipalaUser.PNG" alt="Pagina principala utilizator">
+
+        <h4>Contact - Utilizator</h4>
+        <p>
+          În această pagină, utilizatorul poate vedea aceleași informații ca în pagina de contact la care au acces toți vizitatorii aplicației.
+        </p>
+        <img src="./deton-imgs/ContactUser.PNG" alt="Contact utilizator">
+
+        <h4>Arhiva vizite</h4>
+        <p>
+          În această pagină, utilizatorul poate vedea informații despre vizitele realizate, precum id-ul acesteia, numele și prenumele deținutului, data și ora, natura vizitei și relația cu deținutul, prin intermediul unei tabele paginate.
+        </p>
+        <img src="./deton-imgs/ArhivaVizite.PNG" alt="Arhiva vizite">
+
+        <h4>Arhiva programari</h4>
+        <p>
+          În această pagină, utilizatorul poate vedea informații despre vizitele programate, pe care urmează sa le realizeze, precum id-ul acesteia, numele și prenumele deținutului, data, natura vizitei și relația cu deținutul, prin intermediul unei tabele paginate. Utilizatorul poate selecta o programare oarecare, iar borwser-ul va descărca în mod automat un document cu extensia .ics, ce va conține informațiile specifice programării selectate.
+        </p>
+        <img src="./deton-imgs/ArhivaProgramari.PNG" alt="Arhiva programari">
+
+        <h4>Pagina principală a administratorului</h4>
+        <p>
+          În pagina principală a utilizatorului cu drepturi de administrator, acesta poate vedea toate programările înregistrate în baza de date, prin intermediul unei tabele paginate. Administratorul poate selecta oricare dintre programările afișate, și va fi redirecționat spre o pagină ce îi va permite adăugarea vizitei corespunzătoare programării accesate.
+        </p>
+        <img src="./deton-imgs/PaginaPrincipalaAdmin.PNG" alt="Pagina principala administrator">
+
+        <h4>Adăugarea vizitei</h4>
+        <p>
+          În această pagină, administratorul poate completa câmpurile afișate cu informații legate de vizita tocmai realizată, precum ora la care a început și durata acesteia, martorul, starea de spirit și de sănătate a deținutului, și opțional obiectele pe care acestea le-a oferit vizitatorului, pentru a fi adăugate în baza de date.
+        </p>
+        <img src="./deton-imgs/AdaugaVizita.PNG" alt="Adaugarea vizitei">
+
+        <h4>Utilizatori</h4>
+        <p>
+          Aici administratorul poate vedea informații despre utilizatorii înregistrați, precum numele, prenumele, e-mailul și numărul de telefon. De asemenea, are opțiunea de a filtra utilizatorii în funcție de inițiala numelui de familie, sau de a cauta informații despre un anumit utilizator apasând butonul 'Cauta un utilizator', urmând să fie redirecționat spre pagina corespunzătoare.
+        </p>
+        <img src="./deton-imgs/Utilizatori.PNG" alt="Utilizatori">
+
+        <h4>Caută un utilizator</h4>
+        <p>
+          În această pagina, administratorul poate introduce numele unui utilizator pentru a afla informații legate de acesta.
+        </p>
+        <img src="./deton-imgs/CautaUtilizator.PNG" alt="Cauta utilizatori">
+
+        <h4>Deținuți</h4>
+        <p>
+          Aici administratorul poate vedea informații despre deținuții care au fost înregistrați în baza de date a penitenciarului, precum numele, prenumele, data nașterii, data încarcerării, crima pentru care a fost închis și pedeapsa primită. De asemenea, administratorul poate căuta un anumit deținut, apasând butonul 'Cauta un detinut' sau poate alege să adauge un nou deținut în baza de date, apasând butonul 'Adauga un detinut', urmând să fie redirecționat către paginile corespunzătoare.
+        </p>
+        <img src="./deton-imgs/Detinuti.PNG" alt="Detinuti">
+
+        <h4>Caută un deținut</h4>
+        <p>
+          În această pagina, administratorul poate introduce numele unui deținut pentru a afla informații legate de acesta.
+        </p>
+        <img src="./deton-imgs/CautaDetinut.PNG" alt="Cauta detinut">
+
+        <h4>Adaugă un deținut</h4>
+        <p>
+          În această pagina, administratorul poate introduce informații legate de un nou deținut, pentru a-l introduce în baza de date.
+        </p>        
+        <img src="./deton-imgs/AdaugaDetinut.PNG" alt="Adauga detinut">
+
+        <h4>Statistici</h4>
+        <p>
+          Această pagină oferă administratorului acces la statistici realizate în urma analizei vizitelor înregistrate în baza de date. Administratorul poate alege filtrarea acestora în funcție de anumite criterii, cum ar fi data realizării acestora, deținutul vizitat sau crima pentru care au fost condamnați deținuții.
+        </p> 
+
+        <h3>Back-end</h3>
+        <p>
+          Back-end-ul se ocupă de transmiterea informațiilor de la client la server și invers, precum și prelucrarea acestora și introducerea lor în baza de date atunci când este necesar. Partea de back-end asigură buna funcționare a modulelor de autentificare, creare de cont, introducere de programare sau vizita, afișarea informațiilor relevante legate de utilizatori, deținuti, programări și vizite, precum și generarea de statistici în funcție de diferite criterii.
+        </p>
+
+        <h2>Raport Sarcini</h2>
+        <ul>
+          <li>Alexandra-Elena Minghel
+            <ul>
+              <li>Pagini HTML+CSS </li>
+              <li>Structura bazei de date</li>
+              <li>Autentificare</li>
+              <li>Creare cont</li>
+              <li>Afișarea programărilor</li>
+              <li>Afișarea informațiilor despre utilizatori și deținuți</li>
+            </ul> 
+          </li>
+          <li>Anca Grigoriu
+            <ul>
+              <li>Pagini HTML+CSS</li>
+              <li>Structura bazei de date</li>
+              <li>Adăugare programări și vizite</li>
+              <li>Arhive de vizite și programări ale utilizatorului</li>
+              <li>Adăugarea unui nou deținut</li>
+              <li>Afișare vizite deținut</li>
+              <li>Raport activitate</li>
+            </ul> 
+          </li>
+          <li>Dan-Alexandru Bîzu
+            <ul>
+              <li>Pagini HTML+CSS</li>
+              <li>Generare de statistici</li>
+            </ul> 
+          </li>
+        </ul>
+
+        <figure typeof="schema:Table">
+          <table>
+            <thead>
+              <tr>
+                <th style="text-align: center;">Data</th>
+                <th style="text-align: center;">Persoana</th>
+                <th style="text-align: center;">Componenta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10.03.2016</td>
+                <td>Alexandra-Elena Minghel</td>
+                <td>Crearea repo</td>
+              </tr>
+              <tr>
+                <td>16.03.2016</td>
+                <td>Echipa</td>
+                <td>Stabilirea structurii aplicașiei și distribuirea sarcinilor</td>
+              </tr>
+              <tr>
+                <td>08.04.2016</td>
+                <td>Echipa</td>
+                <td>Crearea și design-ul paginii principale</td>
+              </tr>
+              <tr>
+                <td>14.04.2016</td>
+                <td>Echipa</td>
+                <td>Crearea și design-ul paginii de creare cont</td>
+              </tr>
+              <tr>
+                <td>18.04.2016</td>
+                <td>Echipa</td>
+                <td>Crearea și design-ul paginilor utilizatorilor</td>
+              </tr>
+              <tr>
+                <td>20.04.2016</td>
+                <td>Echipa</td>
+                <td>Creare și design-ul paginilor administratorilor</td>
+              </tr>
+              <tr>
+                <td>22.04.2016</td>
+                <td>Echipa</td>
+                <td>Actualizari HTML+CSS</td>
+              </tr>
+              <tr>
+                <td>23.04.2016</td>
+                <td>Echipa</td>
+                <td>Actualizari HTML+CSS</td>
+              </tr>
+              <tr>
+                <td>01.05.2016</td>
+                <td>Alexandra-Elena Minghel</td>
+                <td>Lucru la back-end: autentificare</td>
+              </tr>
+              <tr>
+                <td>05.05.2016</td>
+                <td>Anca Grigoriu</td>
+                <td>Crearea script generare baza de date</td>
+              </tr>
+              <tr>
+                <td>15.05.2016</td>
+                <td>Anca Grigoriu</td>
+                <td>Lucru la back-end: adaugare programare și afișare programări utilizatori</td>
+              </tr>
+              <tr>
+                <td>20.05.2016</td>
+                <td>Alexandra-Elena Minghel</td>
+                <td>Lucru la back-end: creare cont</td>
+              </tr>
+		          <tr>
+                <td>22.05.2016</td>
+                <td>Alexandra-Elena Minghel</td>
+                <td>Lucru la back-end: pagini administratori</td>
+              </tr>
+		          <tr>
+                <td>22.05.2016</td>
+                <td>Anca Grigoriu</td>
+                <td>Lucru la back-end: pagini utilizatori</td>
+              </tr>
+		          <tr>
+                <td>27.05.2016</td>
+                <td>Anca Grigoriu</td>
+                <td>Scripturi pentru popularea bazei de date</td>
+              </tr>
+		          <tr>
+                <td>28.05.2016</td>
+                <td>Echipa</td>
+                <td>Lucru la back-end</td>
+              </tr>
+              <tr>
+                <td>28.05.2016</td>
+                <td>Anca Grigoriu</td>
+                <td>Raport de activitate</td>
+              </tr>
+              <tr>
+                <td>28.05.2016</td>
+                <td>Alexandra-Elena Minghel</td>
+                <td>Manual de utilizare</td>
+              </tr>
+            </tbody>
+          </table>
+        </figure>
+
+
+        <h2>Bibliografie</h2>
+        <ul>
+          <li><a href="https://dev.mysql.com/doc/refman/5.7/en/">https://dev.mysql.com/</li>
+          <li><a href="http://php.net/manual/en/index.php">http://php.net/manual/en/index.php</a></li>
+        </ul>
+        </section>
+    </article>
+  </body>
+</html>
