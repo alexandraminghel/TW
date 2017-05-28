@@ -39,7 +39,7 @@ require_once('checksession.php');
 	<div class = "header">
 	<div class = "header-logout">
 			<ul>
-				<li><a href="logout.php>Logout</a></li>
+				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>
 	</div>
