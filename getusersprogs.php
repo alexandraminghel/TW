@@ -39,7 +39,7 @@ else {
     	$offset = 0;
 	}
 
-	$query = $conn->prepare('SELECT p.id as "ID", d.nume as "NUME", d.prenume as "PRENUME", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT, p.ORA FROM programari p join detinuti d on p.id_detinut = d.id where p.id_vizitator like ? LIMIT ? OFFSET ?');
+	$query = $conn->prepare('SELECT p.id as "ID", d.nume as "NUME", d.prenume as "PRENUME", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT FROM programari p join detinuti d on p.id_detinut = d.id where p.id_vizitator like ? LIMIT ? OFFSET ?');
 	mysqli_free_result($result);
     $query->bind_param('iii', $user->id, $limit, $offset);
     $query->execute();
@@ -77,11 +77,10 @@ else {
         while ($row = $result->fetch_assoc()) {
             $rows[$rownum][0] = $row['ID'];
             $rows[$rownum][1] = $row['DATA_VIZITEI'];
-            $rows[$rownum][2] = $row['ORA'];
-            $rows[$rownum][3] = $row['NUME'];
-            $rows[$rownum][4] = $row['PRENUME'];
-            $rows[$rownum][5] = $row['NATURA_VIZITEI'];
-            $rows[$rownum][6] = $row['RELATIA_DETINUT'];
+            $rows[$rownum][2] = $row['NUME'];
+            $rows[$rownum][3] = $row['PRENUME'];
+            $rows[$rownum][4] = $row['NATURA_VIZITEI'];
+            $rows[$rownum][5] = $row['RELATIA_DETINUT'];
             $rownum++;
         }
 

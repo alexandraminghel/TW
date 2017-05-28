@@ -7,7 +7,7 @@ require_once('getusersprogs.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arhiva vizite</title>
+	<title>Arhiva programari</title>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="arhiva.css">
 </head>
@@ -26,7 +26,7 @@ require_once('getusersprogs.php');
 	<div class = "wrap">
 		<main>
 			<div class = "wrapmain">
-				<h2>Arhiva vizite</h2>
+				<h2>Arhiva programari</h2>
 				<?php echo $message; ?>
 				<div class = "pagination">
         		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last\"";?> >Inapoi</a>
@@ -34,12 +34,12 @@ require_once('getusersprogs.php');
         </div>
         </br>
         <table class = "vizite">
-          <th><td>ID</td><td>Data</td><td>Ora</td><td>Nume detinut</td><td>Prenume detinut</td><td>Natura vizitei</td><td>Relatia cu detinutul</td></th>
+          <th><td>ID</td><td>Data</td><td>Nume detinut</td><td>Prenume detinut</td><td>Natura vizitei</td><td>Relatia cu detinutul</td></th>
         			<?php
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
-        					for($column = 0; $column < 7; ++$column) {
-        						echo "<td>".$rows[$line][$column]."</td>";
+        					for($column = 0; $column < 6; ++$column) {
+        						echo "<td><a href=\"prog.php?id=".$rows[$line][0]."\">".$rows[$line][$column]."</a></td>";
         					}
         					echo "</tr>";
         				}
