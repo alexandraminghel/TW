@@ -18,19 +18,19 @@ require_once('checkadmin.php');
 		<ul class = "nav">
 			<li class = "nav-item1">
 				<img src = "acasa.png" class = "nav-item1img">
-				<a href="admin.html">Cerere Programari</a>
+				<a href="admin.php">Cerere Programari</a>
 			</li>
 			<li class = "nav-item2">
 				<img src = "users.png" class = "nav-item2img">
-				<a href="admin-utilizatori.html">Utilizatori</a>
+				<a href="utilizatori.php">Utilizatori</a>
 			</li>
 			<li class = "nav-item3">
 				<img src = "detinuti.png" class = "nav-item3img">
-				<a href="detinuti.html">Detinuti</a>
+				<a href="detinuti.php">Detinuti</a>
 			</li>
 			<li class = "nav-item4">
 				<img src = "statistici.png" class = "nav-item4img">
-				<a href="statisticsadmin.html">Statistici</a>
+				<a href="statisticsadmin.php">Statistici</a>
 			</li>
 			<li class = "logout">
 				<a href = "logout.php">Logout</a>
@@ -73,7 +73,7 @@ require_once('checkadmin.php');
 					<input type="text" name="crima" id="crima" placeholder="Crima pentru care este inchis">
 				</li>
 				<li>
-					<button type="submit">Inregistrare vizita</button>
+					<button type="submit">Adauga detinut</button>
 				</li>
 			</ul>
 		</form>	
