@@ -11,6 +11,10 @@ if (! (isset($_POST["nume"]) && isset($_POST["prenume"]) && isset($_POST["datana
 	$message = "Atentie! Campuri obligatorii necompletate!</br>Redirectare spre pagina principala in 3 secunde.";
 }
 
+else if ($_POST["nume"] == "" || $_POST["prenume"] == "" || $_POST["datanastere"] == "" || $_POST["dataincarc"] == "" || $_POST["pedeapsa"] == "" || $_POST["crima"] == "") {
+	$message = "Atentie! Campuri obligatorii necompletate!</br>Redirectare spre pagina principala in 3 secunde.";
+}
+
 else {
 	$nume = $_POST["nume"];
 	$prenume = $_POST["prenume"];
