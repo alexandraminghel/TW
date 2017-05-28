@@ -1,12 +1,13 @@
 <?php  
 function getLastVisit($id, $conn) {
 	
-	$query = $conn->prepare('SELECT count(*) FROM vizite where id_vizitator like ?');
+	$query = $conn->prepare('SELECT count(*) as "nr" FROM vizite where id_vizitator like ?');
 	$query->bind_param('i', $id);
 	$query->execute();
 	$result = $query->get_result();
- 
- 	if( mysqli_num_rows($result) > 0) {
+	$row = $result->fetch_assoc();
+	
+ 	if( $row['nr'] > 0) {
  		
  		$query = $conn->prepare('SELECT max(data_vizitei) as "data" FROM vizite where id_vizitator like ?');
 		$query->bind_param('i', $id);
@@ -19,7 +20,7 @@ function getLastVisit($id, $conn) {
  	}
 
  	else {
- 		return "-";
+ 		return "-.-.-";
  	}
 }
 
