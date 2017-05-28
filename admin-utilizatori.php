@@ -93,7 +93,7 @@ require('getutilizatori.php');
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
         					for($column = 0; $column < 4; ++$column) {
-        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        						echo "<td>".$rows[$line][$column]."</td>";
         					}
         					echo "</tr>";
         				}
