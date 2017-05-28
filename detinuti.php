@@ -65,7 +65,7 @@ require('getdet.php');
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
         					for($column = 0; $column < 6; ++$column) {
-        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        						echo "<td><a href=\"vizitedetinut.php?id=$id_viz[$line]\">".$rows[$line][$column]."</td>";
         					}
         					echo "</tr>";
         				}

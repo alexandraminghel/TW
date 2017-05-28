@@ -24,7 +24,7 @@ if ($nr_det == 0) {
 }
 else
  {
-	$limit = 2;
+	$limit = 3;
 	$pages = ceil($nr_det / $limit);
 
 	if ( isset($_GET["page"]) ) {
@@ -84,9 +84,11 @@ if (! $result) {
 
         $rows = array(array());
         $rownum = 0;
+        $contorid=0;
         while ($row = $result->fetch_assoc())
         {
-             $id_det=$row['ID_DET'];
+             $id_viz[$contorid]=$row['ID_DET'];
+             $contorid++;
              $rows[$rownum][0] = $row['NUME'];
              $rows[$rownum][1] = $row['PRENUME'];
              $rows[$rownum][2] = $row['DAT_NAS'];
