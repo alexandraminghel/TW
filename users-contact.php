@@ -7,9 +7,9 @@ require_once('cvisit.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Informatii de contact</title>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="users-contact-style.css">
+<title>Informatii de contact</title>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="users-contact-style.css">
 </head>
 <body>
 	<div class = "userheader">
@@ -18,7 +18,8 @@ require_once('cvisit.php');
       		<ul>
         		<li><a href="newvisit.php">Acasa</a></li>
         		<li><a href="users-contact.php">Contact</a></li>
-        		<li><a href="arhivausers.php">Arhiva</a></li>
+        		<li><a href="arhivausers.php">Arhiva vizite</a></li>
+        		<li><a href="arhivaprogusers.php">Arhiva programari</a></li>
         		<li><a href="logout.php">Logout</a></li>
       		</ul>
     	</div>

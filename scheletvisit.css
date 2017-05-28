@@ -277,20 +277,30 @@ ul
 	}
 }
 
+@media only screen and (max-width : 415px) {
+	.usernav {
+		width: 100%;
+	}
+
+	.usernav li a 
+	{
+		font-size: 70%;
+	}	
+}
+
 @media only screen and (max-width : 321px){
 	.flex button{
 		font-size: 80%;
 		margin-left: auto;
 	}	
 
-	.usernav li{
-		padding-top: 1%;
-		padding-left: 1%;
-		padding-right: 1%;
-	}	
+	.usernav li a 
+	{
+		margin-top: 3%;
+		font-size: 65%;
+	}
 
 	.usernav ul{
-		margin-right: auto;
 		width: 100%;
 	}
 
@@ -315,6 +325,13 @@ ul
 	.flex button{
 		margin-right: 0;
 	}
+}
+
+@media only screen and (max-height: 500px) {
+	.userheader
+	{  
+    	height: 10%; 
+	}	
 }
 
 @media only screen and (min-height: 700px){

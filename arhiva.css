@@ -288,10 +288,22 @@ ul
 	}
 }
 
+@media only screen and (max-width : 415px) {
+	.usernav {
+		width: 100%;
+	}
+
+	.usernav li a 
+	{
+		font-size: 70%;
+	}	
+}
+
 @media only screen and (max-width : 321px) {
 	.usernav li a 
 	{
 		margin-top: 3%;
+		font-size: 65%;
 	}	
 
 	.usernav ul
@@ -311,6 +323,13 @@ ul
 		width: 50%;
 		padding-left: 25%;
 	}
+}
+
+@media only screen and (max-height: 500px) {
+	.userheader
+	{  
+    	height: 10%; 
+	}	
 }
 
 @media only screen and (min-height: 700px) {

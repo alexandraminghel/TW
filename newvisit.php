@@ -18,7 +18,8 @@ require_once('cvisit.php');
       <ul>
         <li><a href="newvisit.php">Acasa</a></li>
         <li><a href="users-contact.php">Contact</a></li>
-        <li><a href="arhivausers.php">Arhiva</a></li>
+        <li><a href="arhivausers.php">Arhiva vizite</a></li>
+        <li><a href="arhivaprogusers.php">Arhiva programari</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>

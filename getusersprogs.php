@@ -9,7 +9,7 @@ require_once ('detinutobject.php');
 $email = $_SESSION['email'];
 $message = "";
 $user = new User($email, $conn);
-$query = $conn->prepare('SELECT count(*) as "nr" FROM vizite where id_vizitator like ?');
+$query = $conn->prepare('SELECT count(*) as "nr" FROM programari where id_vizitator like ?');
 $query->bind_param('i', $user->id);
 $query->execute();
 $result = $query->get_result();
@@ -23,7 +23,7 @@ if ($nr_progs == 0) {
     $rows = array(array());
     $page = 1;
     $last = 1;
- 	$message = "Nu aveti inca nici o vizita realizata.";
+ 	$message = "Nu aveti inca nici o programare realizata.";
 }
 else {
 	$limit = 5;
@@ -39,14 +39,14 @@ else {
     	$offset = 0;
 	}
 
-	$query = $conn->prepare('SELECT p.id as "ID", d.nume as "NUME", d.prenume as "PRENUME", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT, p.ORA FROM vizite p join detinuti d on p.id_detinut = d.id where p.id_vizitator like ? LIMIT ? OFFSET ?');
+	$query = $conn->prepare('SELECT p.id as "ID", d.nume as "NUME", d.prenume as "PRENUME", p.DATA_VIZITEI, p.NATURA_VIZITEI, p.RELATIA_DETINUT, p.ORA FROM programari p join detinuti d on p.id_detinut = d.id where p.id_vizitator like ? LIMIT ? OFFSET ?');
 	mysqli_free_result($result);
     $query->bind_param('iii', $user->id, $limit, $offset);
     $query->execute();
     $result = $query->get_result();
 
 	if (mysqli_num_rows($result) == 0) {
-    	$message = "Nu aveti inca nici o vizita realizata";
+    	$message = "Nu aveti inca nici o programare realizata";
     	echo $message;
 	}
 
