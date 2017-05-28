@@ -28,38 +28,50 @@ if (isset($_POST['submitbutton'])) {
 		$lastname = $_POST["lastname"];
 		$firstname = $_POST["firstname"];
 
-		$detinut = new Detinut($lastname, $firstname, $conn);
-
-		if ($detinut->id == 0) {
-			$message = "Atentie! Detinutul cu numele $lastname $firstname nu se afla in baza de date.";
-		}
-
-		else if ($detinut->id == -1) {
-			$message = "problema";
-			
-			if (isset($_POST["id"]) && $_POST["id"] != "") {
-
-				$id = (int)$_POST["id"];
-				unset($detinut);
-				$detinut2 = new Detinut($id, $conn);
-
-				if ($detinut2->id != 0) {
-					$ok = 1;
-					$detinut = clone $detinut2;
-				}
-
-				else {
-					$message = "Detinutul cu id-ul $id nu se afla in baza de date";
-				}
+		if (isset($_POST["id"]) && $_POST["id"] != "") {
+			$id = (int)$_POST["id"];
+			$detinut = new Detinut($id, $conn);
+			if (strtolower($lastname." ".$firstname) != strtolower($detinut->nume)) {
+				$message = "Atentie! Numele detinutului nu se potriveste cu id-ul!";
 			}
-
 			else {
-				$message = "Atentie! In baza de date de regasesc mai multi detinuti cu numele $lastname $firstname! Va rugam sa introduceti si id-ul detinutului!";
+				$ok = 1;
 			}
 		}
 
 		else {
-			$ok = 1;
+			$detinut = new Detinut($lastname, $firstname, $conn);
+
+			if ($detinut->id == 0) {
+				$message = "Atentie! Detinutul cu numele $lastname $firstname nu se afla in baza de date.";
+			}
+
+			else if ($detinut->id == -1) {
+			
+				if (isset($_POST["id"]) && $_POST["id"] != "") {
+
+					$id = (int)$_POST["id"];
+					unset($detinut);
+					$detinut2 = new Detinut($id, $conn);
+
+					if ($detinut2->id != 0) {
+						$ok = 1;
+						$detinut = clone $detinut2;
+					}
+
+					else {
+						$message = "Detinutul cu id-ul $id nu se afla in baza de date";
+					}
+				}
+
+				else {
+					$message = "Atentie! In baza de date de regasesc mai multi detinuti cu numele $lastname $firstname! Va rugam sa introduceti si id-ul detinutului!";
+				}
+			}
+
+			else {
+				$ok = 1;
+			}
 		}
 
 		if ($ok == 1) {

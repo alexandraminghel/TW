@@ -32,8 +32,9 @@ class Detinut {
 
 	public function createByName($lastname, $firstname, $conn) {
 		$this->nume = $lastname." ".$firstname;
-
-		$query = $conn->prepare('SELECT id, DATANASTERE, DATAINCARCERARE, PEDEAPSA FROM detinuti where nume like ? and prenume like ?');
+		$lastname = strtolower($lastname);
+		$firstname = strtolower($firstname);
+		$query = $conn->prepare('SELECT id, DATANASTERE, DATAINCARCERARE, PEDEAPSA FROM detinuti where LOWER(nume) like ? and LOWER(prenume) like ?');
 		$query->bind_param('ss', $lastname, $firstname);
 		$query->execute();
 		$result = $query->get_result();
