@@ -1,5 +1,6 @@
 <?php  
 require_once('checksession.php');
+require_once('checkadmin.php');
 require('getvisit.php');
 ?>
 <!DOCTYPE html>

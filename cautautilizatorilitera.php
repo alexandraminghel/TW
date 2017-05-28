@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
 
 if (! $result) {
-    	$message = "Nu aveti inca nici o vizita realizata aaaaaaaaaaaaaaaaa";
+    	$message = "Nu exista utilizatori cu prima litera $litera in baza de date ";
     	echo "<div class=\"nici\">";
         
      

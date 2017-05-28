@@ -1,12 +1,12 @@
 <?php  
 require_once('checksession.php');
 require('getnumeuser.php');
-
+require_once('checkadmin.php');
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Detinuti</title>
+	<title>Utilizatori</title>
 	<meta charset="utf-8" name = "viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="detinuti.css">
 </head>
@@ -64,7 +64,7 @@ require('getnumeuser.php');
         				for($line = 0; $line < $rownum; ++$line) {
         					echo "<tr>";
         					for($column = 0; $column < 4; ++$column) {
-        						echo "<td><a href=\"vizitedetinut.php?id=$id_det\">".$rows[$line][$column]."</td>";
+        						echo "<td>".$rows[$line][$column]."</td>";
         					}
         					echo "</tr>";
         				}

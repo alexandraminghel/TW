@@ -52,7 +52,7 @@ $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
 
 if (! $result) {
-    	$message = "Nu aveti inca nici o vizita realizata a";
+    	$message = "Nu exista detinutul in baza de date";
     	//echo "<div class=\"nici\">";
     	echo $message;
     	//echo "<div/>";

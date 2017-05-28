@@ -13,7 +13,7 @@ $PrenumeTabel="Prenume";
 $EmailTabel="Email";
 $TelefonTabel="Numar telefon";
 if ($nr_users == 0) {
- 	$message = "Nu exista detinuti in baza de date";
+ 	$message = "Nu exista utilizatori in baza de date";
      $line=0;
      $rownum=0;
      $last=0;
@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $query, MYSQLI_USE_RESULT);
 
 
 if (! $result) {
-    	$message = "Nu aveti inca nici o vizita realizata aaaaaaaaaaaaaaaaa";
+    	$message = "Nu exista utilizatori in baza de date";
     	//echo "<div class=\"nici\">";
     	echo $message;
     	//echo "<div/>";

@@ -1,7 +1,7 @@
 <?php  
 require_once('checksession.php');
 require('getnumedet.php');
-
+require_once('checkadmin.php');
 ?>
 <!DOCTYPE html>
 <html>

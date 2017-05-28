@@ -1,7 +1,7 @@
 <?php  
 require_once('checksession.php');
 require('cautautilizatorilitera.php');
-
+require_once('checkadmin.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,8 +49,8 @@ require('cautautilizatorilitera.php');
 			</div>	
 	<div class="afisare">
 				<div class = "pagination">
-        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last&litera=A\"; >".$Inapoi."</a>"?>
-        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page&litera=A\"; >".$Inainte."</a>"?>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$last&litera=$litera\"; >".$Inapoi."</a>"?>
+        		<a href = <?php echo "\"$_SERVER[PHP_SELF]?page=$page&litera=$litera\"; >".$Inainte."</a>"?>
                 </div>
                 <div class="categorii">
 		        
