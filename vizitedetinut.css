@@ -177,12 +177,12 @@ ul
 	justify-content: space-around;
 }
 
-.pagination li
+.pagination 
 {
 	float: left;
 }
 
-.pagination li a
+.pagination a
 {
 	text-decoration: none;
 	color: black;
