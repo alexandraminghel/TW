@@ -43,9 +43,9 @@ require('getdet.php');
 		</div>
 	</div>
 	<div class = "statisticsid">
-				<button class="buton1"><a href="cautadetinuti.php">Cauta un detinut</a></button>
+				<a href="cautadetinuti.php"><button class="buton1">Cauta un detinut</button></a>
 
-				<button class="buton2"><a href="addnewdet.php">Adauga un detinut</button>
+		<a href="addnewdet.php"><button class="buton2">Adauga un detinut</button></a>
 	
 			
 			</div>	
