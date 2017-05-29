@@ -31,7 +31,7 @@ require('getdet.php');
 			</li>
 			<li class="nav-item4">
 				<img src="statistici.png" class="nav-item4img">
-				<a href="statisticsadmin.html">Statistici</a>
+				<a href="statisticsadmin.php">Statistici</a>
 			</li>
 		</ul>
 	</div>
